@@ -1,4 +1,4 @@
-# BetterTerrain for RimWorld v0.02
+# BetterTerrain for RimWorld v0.03
 
 Finished...
   -Mountains
