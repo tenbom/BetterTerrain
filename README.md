@@ -27,3 +27,5 @@ The mod generates terrain much differently causing smoother transitions and diff
 2/1 - tropical forest is both beautifull and functional.  Added rivers.  Created actual marshes.  Created rare-high-ground areas and rare fertile areas.
 
 2/2 - temperate forest is both beautifull and functionl.  Added plains.  Added lakes.  Much more variation in tree/bush sprites.  Generally farm friendly Biome.
+
+2/3 - tweaked mountain generation for better formations near water.
