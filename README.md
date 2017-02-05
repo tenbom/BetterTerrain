@@ -1,7 +1,6 @@
-# BetterTerrain for RimWorld v0.045
+# BetterTerrain for RimWorld v0.046
 
-Beautifull.
-  -Temperate Forest
+In Progress... Temperate Forest.  Made trees clump up by kind.  Made grass long and flowing.
 
 Functional..Mountains -Tropical Forest
 
