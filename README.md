@@ -2,9 +2,9 @@
 
 Beautifull.
   -Temperate Forest
-Functional..
-  -Mountains
-  -Tropical Forest
+
+Functional..Mountains -Tropical Forest
+
 Soon to be...
   -Beaches
   -Shrublands, Desert, Boreal forest, ice.
