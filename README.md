@@ -1,13 +1,13 @@
-# BetterTerrain for RimWorld v0.044
+# BetterTerrain for RimWorld v0.045
 
-Finished...
+Beautifull.
+  -Temperate Forest
+Functional..
   -Mountains
   -Tropical Forest
-  -Temperate Forest
-
-ToDo...
+Soon to be...
   -Beaches
-  -Shrublands, Desert, Boreal forest.
+  -Shrublands, Desert, Boreal forest, ice.
 
 ========================Details==========================
 
