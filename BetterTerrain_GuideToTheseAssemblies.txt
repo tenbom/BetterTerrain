@@ -6,10 +6,19 @@ I added a perlin map for trees.  Used in GenStep_Plants.
 
 Mild edits to elevation at flat and small hills since GenStep_Terrain calculates mountains differently now.
 
+
+----GenStep_RocksFromGrid
+in generate I called in the fertility grid to help determine where mountains should go.  
+Basing it off of 2 perlin maps gives much more interesting shapes, it also can help the mountains flow better with the terrain.
+To keep the map from just looking topographical and dull I multiply points on the elevation grid by ones on the fertility grid.
+I set it up so mountains can spawn only when elevation is high and when fertility is high or very low.  
+This means mountains will genererally form in areas away from low fertility areas, but occasionally pop up around lakes or rivers, exc.
+
+
 ----GenStep_Terrain
 in TerrainFrom I added in if statements that calculate a noise variable.  Noise is the value the biome XMLs will use when determining what terrain goes where.
 Higher elevations calculate the XML value based more on elevation, lower elevations calculate it based more on fertility.
-This creates interesting terrain yet keeps the ThingDefOf.Sandstone close to mountains (mountains are determine solely by elevation, in an assembly I don't edit)
+This creates interesting terrain yet keeps the ThingDefOf.Sandstone close to mountains (mountains are determined in RocksFromGrid)
 
 
 ----GenStep_Plants
