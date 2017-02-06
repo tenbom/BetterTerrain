@@ -1,4 +1,10 @@
-# BetterTerrain for RimWorld v0.046
+# BetterTerrain for RimWorld v0.048
+
+The grass was released, but now it has been tamed!
+Raspberry bushes are now visible.
+Good soil is now visible.
+
+===================
 
 In Progress... Temperate Forest.  Made trees clump up by kind.  Made grass long and flowing.
 
