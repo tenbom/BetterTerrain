@@ -6,7 +6,7 @@ Good soil is now visible.
 
 ===================
 
-In Progress... Temperate Forest.  Made trees clump up by kind.  Made grass long and flowing.
+In Progress... Temperate Forest.
 
 Functional..Mountains -Tropical Forest
 
@@ -20,9 +20,9 @@ The mod generates terrain much differently causing smoother transitions and diff
 
 ----Mountains---- fallow the contours of the map more (with some nifty variations I made).  It means that mountains consistently create much more interesting and usefull shapes.
 
-----The Tropical Forest---- was made to make it feel like a brazilian rain forest.  That means tons of rivers, tons of dense slow-to-traverse forests, little good farm land and few open areas.
-
 ----The Temperate Forest---- was made to draw more on the 'cradle of civilizations' idea.  There are large plains while the good farm land is near water.
+
+----The Tropical Forest---- was made to make it feel like a brazilian rain forest.  That means tons of rivers, tons of dense slow-to-traverse forests, little good farm land and few open areas.
 
 
 ======================PROGRESS==========================
@@ -34,3 +34,7 @@ The mod generates terrain much differently causing smoother transitions and diff
 2/2 - temperate forest is both beautifull and functionl.  Added plains.  Added lakes.  Much more variation in tree/bush sprites.  Generally farm friendly Biome.
 
 2/3 - tweaked mountain generation for better formations near water.  Made different tiles have different amounts of precious mineable resources.  Temperate<Desert<boreal<shrubland<tundra
+
+2/4 - compatibility work.  Updated birch trees to look fabulous.
+
+2/5 - grass.  so much grass.  And its fluffy!!!
