@@ -2,7 +2,8 @@
 
 More compatibility.
 Tropical forest re-arting is underway.
-The grass was released, but now it has been tamed!
+
+Temperate Forest grass was released, but now it has been tamed!
 Raspberry bushes are now visible.
 Good soil is now visible.
 
