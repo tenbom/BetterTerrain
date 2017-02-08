@@ -1,5 +1,7 @@
-# BetterTerrain for RimWorld v0.048
+# BetterTerrain for RimWorld v0.052
 
+More compatibility.
+Tropical forest re-arting is underway.
 The grass was released, but now it has been tamed!
 Raspberry bushes are now visible.
 Good soil is now visible.
