@@ -8,7 +8,7 @@
     <workerClass>BiomeWorker_BorealForest</workerClass>
     <implemented>true</implemented>
     <animalDensity>3.0</animalDensity>
-    <plantDensity>0.7</plantDensity>
+    <plantDensity>0.4</plantDensity>
     <factionBaseSelectionWeight>0.9</factionBaseSelectionWeight>
     <pathCost>
       <points>
@@ -66,9 +66,14 @@
         <perlinFrequency>0.015</perlinFrequency>
         <thresholds>
 		<li>
-            <terrain>WaterShallow</terrain>
+            <terrain>SoilRich</terrain>
             <min>-999</min>
-            <max>-0.03</max>
+            <max>-0.08</max>
+          </li>
+		<li>
+            <terrain>WaterShallow</terrain>
+            <min>-0.08</min>
+            <max>0.03</max>
           </li>
 		 <!--  <li>
             <terrain>MarshyTerrainWater</terrain>
@@ -77,8 +82,8 @@
           </li> -->
 		  <li>
             <terrain>Mud</terrain>
-            <min>-0.03</min>
-            <max>-0.01</max>
+            <min>0.03</min>
+            <max>0.05</max>
           </li>
 		  <!-- <li>
             <terrain>MarshyTerrain</terrain>
@@ -86,14 +91,9 @@
             <max>-0.08</max>
           </li> -->
           <li>
-            <terrain>SoilRich</terrain>
-            <min>-0.01</min>
-            <max>0.07</max>
-          </li>
-          <li>
             <terrain>SoilBoreal</terrain>
-            <min>0.07</min>
-            <max>0.34</max>
+            <min>0.05</min>
+            <max>0.26</max>
           </li>
 		  <!-- <li>
             <terrain>Plains</terrain>
@@ -102,7 +102,7 @@
           </li> -->
 		  <li>
             <terrain>GravelSoil</terrain>
-            <min>0.34</min>
+            <min>0.26</min>
             <max>0.6</max>
           </li>
           <!-- <li>
@@ -139,13 +139,16 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <PlantRaspberry>2.2</PlantRaspberry>
-      <PlantBush>1.1</PlantBush>
-      <!-- <PlantGrass>8.0</PlantGrass> -->
-      <PlantBorealDebris>5.0</PlantBorealDebris>
-      <PlantTreePoplar>1.2</PlantTreePoplar>
-      <PlantTreePine>5.0</PlantTreePine>
-      <PlantTreeBirch>1.5</PlantTreeBirch>
+      <BT_Temp_Raspberry>1.0</BT_Temp_Raspberry>
+	  <!-- <BT_Temp_GrassG>7.0</BT_Temp_GrassG> -->
+	  <BT_Temp_Bush>2.0</BT_Temp_Bush>
+	  <BT_Temp_GrassY>7.0</BT_Temp_GrassY>
+      <!-- <PlantBush>1.1</PlantBush>
+      <PlantGrass>8.0</PlantGrass> -->
+      <!-- <PlantBorealDebris>5.0</PlantBorealDebris> -->
+      <!-- <PlantTreePoplar>1.2</PlantTreePoplar> -->
+      <BT_TreePine>6.0</BT_TreePine>
+      <!-- <BT_TreePoplar>6.5</BT_TreePoplar> -->
     </wildPlants>
     <wildAnimals>
       <Elk>0.5</Elk>
@@ -240,14 +243,44 @@
         <perlinFrequency>0.015</perlinFrequency>
         <thresholds>
           <li>
-            <terrain>MossyTerrain</terrain>
-            <min>0.64</min>
-            <max>0.83</max>
+            <terrain>SoilRich</terrain>
+            <min>-999</min>
+            <max>-0.1</max>
           </li>
+		<li>
+            <terrain>WaterShallow</terrain>
+            <min>-0.1</min>
+            <max>0.05</max>
+          </li>
+		 <!--  <li>
+            <terrain>MarshyTerrainWater</terrain>
+            <min>-0.12</min>
+            <max>-0.14</max>
+          </li> -->
+		  <li>
+            <terrain>Mud</terrain>
+            <min>0.05</min>
+            <max>0.07</max>
+          </li>
+		  <!-- <li>
+            <terrain>MarshyTerrain</terrain>
+            <min>-0.14</min>
+            <max>-0.08</max>
+          </li> -->
           <li>
-            <terrain>Marsh</terrain>
-            <min>0.83</min>
-            <max>999</max>
+            <terrain>SoilBoreal</terrain>
+            <min>0.07</min>
+            <max>0.34</max>
+          </li>
+		  <!-- <li>
+            <terrain>Plains</terrain>
+            <min>0.24</min>
+            <max>0.47</max>
+          </li> -->
+		  <li>
+            <terrain>GravelSoil</terrain>
+            <min>0.34</min>
+            <max>0.6</max>
           </li>
         </thresholds>
       </li>
@@ -264,13 +297,14 @@
     </baseWeatherCommonalities>
     <wildPlants>
       <PlantRaspberry>0.01</PlantRaspberry>
-      <PlantBush>0.03</PlantBush>
+      <BT_Temp_Bush>0.03</BT_Temp_Bush>
+	  <BT_Temp_Shrub>0.03</BT_Temp_Shrub>
       <PlantAstragalus>0.01</PlantAstragalus>
-      <PlantDandelion>0.01</PlantDandelion>
-      <PlantGrass>0.3</PlantGrass>
+      <PlantDandelion>0.04</PlantDandelion>
+      <BT_Temp_GrassG>0.3</BT_Temp_GrassG>
       <PlantMoss>0.05</PlantMoss>
-      <PlantTreePine>0.01</PlantTreePine>
-      <PlantTreeBirch>0.01</PlantTreeBirch>
+      <BT_TreePine>0.5</BT_TreePine>
+      <!-- <PlantTreeBirch>0.01</PlantTreeBirch> -->
     </wildPlants>
     <wildAnimals>
       <Elk>0.25</Elk>

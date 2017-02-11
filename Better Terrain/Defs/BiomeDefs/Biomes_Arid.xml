@@ -7,7 +7,7 @@
     <description>A dry region, but not dry enough to become a true desert. Open plains with grasses and bushes give way to scattered groves of trees. Plants are hardy and there is a moderate density of animals.</description>
     <workerClass>BiomeWorker_AridShrubland</workerClass>
     <animalDensity>3.6</animalDensity>
-    <plantDensity>0.5</plantDensity>
+    <plantDensity>0.8</plantDensity>
     <factionBaseSelectionWeight>0.95</factionBaseSelectionWeight>
     <pathCost>
       <points>
@@ -47,7 +47,7 @@
     </diseases>
     <terrainsByFertility>
       <li>
-        <terrain>Sand</terrain>
+        <terrain>Plains</terrain>
         <min>-999</min>
         <max>0.45</max>
       </li>
@@ -73,15 +73,17 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-        <PlantAgave>0.3</PlantAgave>
+        <PlantAgave>0.15</PlantAgave>
         <PlantSaguaroCactus>0.3</PlantSaguaroCactus>
         <PlantPincushionCactus>0.6</PlantPincushionCactus>
-        <PlantRaspberry>0.1</PlantRaspberry>
-        <PlantShrub>0.7</PlantShrub>
-        <PlantGrass>6.9</PlantGrass>
-        <PlantDandelion>0.8</PlantDandelion>
-        <PlantTreeOak>0.25</PlantTreeOak>
-        <PlantTreePoplar>0.35</PlantTreePoplar>
+        <!-- <BT_Shurb_Flax>10.0</BT_Shurb_Flax> -->
+        <!-- <PlantShrub>0.7</PlantShrub> -->
+		<BT_Temp_GrassY>10.0</BT_Temp_GrassY>
+        <!-- <BT_Temp_GrassG>6.9</BT_Temp_GrassG> -->
+		<BT_Temp_Raspberry>0.5</BT_Temp_Raspberry>
+        <PlantDandelion>2.0</PlantDandelion>
+        <BT_TreeOak>0.25</BT_TreeOak>
+        <BT_TreePoplar>0.35</BT_TreePoplar>
     </wildPlants>
     <wildAnimals>
       <Muffalo>0.5</Muffalo>
@@ -115,7 +117,7 @@
     <description>A very dry area which supports little life. Deserts can be hot, or quite cold.</description>
     <workerClass>BiomeWorker_Desert</workerClass>
     <animalDensity>0.8</animalDensity>
-    <plantDensity>0.14</plantDensity>
+    <plantDensity>0.15</plantDensity>
     <factionBaseSelectionWeight>0.65</factionBaseSelectionWeight>
     <pathCost>
       <points>
@@ -151,14 +153,29 @@
       </li>
     </diseases>
     <terrainsByFertility>
-      <li>
-        <terrain>Sand</terrain>
+	  <li>
+        <terrain>Plains</terrain>
         <min>-999</min>
-        <max>0.80</max>
+        <max>-0.12</max>
+      </li>
+	  <li>
+        <terrain>SoilSandWater</terrain>
+        <min>-0.12</min>
+        <max>-.09</max>
+      </li>
+	  <li>
+        <terrain>Plains</terrain>
+        <min>-0.09</min> 
+        <max>0.05</max>
+      </li>
+	  <li>
+        <terrain>TSandPlains</terrain>
+        <min>0.05</min> 
+        <max>0.13</max>
       </li>
       <li>
-        <terrain>Soil</terrain>
-        <min>0.80</min>
+        <terrain>Sand</terrain>
+        <min>0.13</min>
         <max>999</max>
       </li>
     </terrainsByFertility>
@@ -172,12 +189,14 @@
     </baseWeatherCommonalities>
     <wildPlants>
         <PlantAgave>0.25</PlantAgave>
+		<BT_Temp_Raspberry>0.5</BT_Temp_Raspberry>
         <PlantSaguaroCactus>1</PlantSaguaroCactus>
         <PlantPincushionCactus>1</PlantPincushionCactus>
         <PlantBush>0.25</PlantBush>
-        <PlantGrass>6</PlantGrass>
+		<BT_Temp_GrassG>3</BT_Temp_GrassG>
+        <BT_Temp_GrassY>1</BT_Temp_GrassY>
         <PlantDandelion>0.5</PlantDandelion>
-        <PlantTreePoplar>0.45</PlantTreePoplar>
+        <PlantTreePoplar>1</PlantTreePoplar>
     </wildPlants>
     <wildAnimals>
       <Gazelle>0.1</Gazelle>

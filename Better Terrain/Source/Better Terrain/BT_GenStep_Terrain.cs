@@ -38,7 +38,7 @@ namespace Better_Terrain
 			float noise;
 			if (requireSolid)
 			{
-				return BT_GenStep_RocksFromGrid.RockDefAt(c).naturalTerrain;
+				return BT_GenStep_RocksFromGrid.RockDefAt(map, c).naturalTerrain;
 			}
 			TerrainDef terrainDef = BT_BeachMaker.BeachTerrainAt(c);
 			if (terrainDef != null)

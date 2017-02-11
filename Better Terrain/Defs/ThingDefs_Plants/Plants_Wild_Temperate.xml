@@ -5,14 +5,14 @@
 
 
   <ThingDef ParentName="PlantBase">
-    <defName>PlantRaspberry</defName>
+    <defName>BT_Temp_Raspberry</defName>
     <label>raspberry bush</label>
     <description>A bushy plant which yields delicious red berries.</description>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>Things/Plant/Raspberry</texPath>
+      <texPath>BT/Temp/Raspberry</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.55, 0.2, 0.2)</volume>
@@ -25,6 +25,10 @@
       <nutrition>0.25</nutrition>
     </ingestible>
     <plant>
+		<sowTags>
+			<li>Clump</li>
+			<li>/Plains</li>
+		</sowTags>
 			<fertilityMin>0.5</fertilityMin>
 			<fertilitySensitivity>0.5</fertilitySensitivity>
 			<growDays>3</growDays>
@@ -47,21 +51,61 @@
 			<topWindExposure>0.3</topWindExposure>
 		</plant>
   </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>BT_Temp_Mush</defName>
+    <label>mushrooms</label>
+    <description>adorable.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>BT/Temp/Mush</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <!-- <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+      </shadowData> -->
+    </graphicData>
+    <fillPercent>0.1</fillPercent>
+    <pathCost>30</pathCost>
+    <ingestible>
+      <nutrition>0.25</nutrition>
+    </ingestible>
+    <plant>
+		<sowTags>
+			<li>/Mud</li>
+		</sowTags>
+			<fertilityMin>0.1</fertilityMin>
+			<fertilitySensitivity>0.2</fertilitySensitivity>
+			<growDays>3</growDays>
+			<maxMeshCount>4</maxMeshCount>
+			<wildClusterSizeRange>
+				<min>7</min>
+				<max>10</max>
+			</wildClusterSizeRange>
+			<wildClusterRadius>4</wildClusterRadius>
+			<visualSizeRange>
+				<min>0.35</min>
+				<max>0.75</max>
+			</visualSizeRange>
+			<topWindExposure>0.3</topWindExposure>
+		</plant>
+  </ThingDef>
 
 
   <ThingDef ParentName="PlantBase">
-    <defName>PlantBush</defName>
+    <defName>BT_Temp_Shrub</defName>
     <label>bush</label>
     <description>A short shrub. Does not typically talk.</description>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>BT/Plant/Bush</texPath>
+      <texPath>BT/Temp/Shrub</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-       <shadowData>
+       <!-- <shadowData>
          <volume>(0.55, 0.2, 0.2)</volume>
-       </shadowData>
+       </shadowData> -->
     </graphicData>
     <selectable>true</selectable>
     <fillPercent>0.25</fillPercent>
@@ -70,11 +114,15 @@
       <nutrition>0.17</nutrition>
     </ingestible>
     <plant>
-			<fertilityMin>0.4</fertilityMin>
-			<fertilitySensitivity>0.5</fertilitySensitivity>
-			<growDays>3</growDays>
-			<leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
-			<wildClusterSizeRange>
+		<sowTags>
+			<li>Clump</li>
+			<li>/Plains</li>
+        </sowTags>
+		<fertilityMin>0.4</fertilityMin>
+		<fertilitySensitivity>0.5</fertilitySensitivity>
+		<growDays>3</growDays>
+		<leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
+		<wildClusterSizeRange>
         <min>2</min>
         <max>5</max>
       </wildClusterSizeRange>
@@ -87,11 +135,50 @@
     </plant>
   </ThingDef>
 
+  <ThingDef ParentName="PlantBase">
+    <defName>BT_Temp_Bush</defName>
+    <label>undergrowth</label>
+    <description>forest clutter.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>BT/Temp/Bush</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <!-- <shadowData>
+         <volume>(0.55, 0.2, 0.2)</volume>
+       </shadowData> -->
+    </graphicData>
+    <selectable>false</selectable>
+    <fillPercent>0.15</fillPercent>
+    <pathCost>30</pathCost>
+    <ingestible>
+      <nutrition>0.17</nutrition>
+    </ingestible>
+    <plant>
+		<sowTags>
+			<li>/Soil</li>
+        </sowTags>
+		<fertilityMin>0.4</fertilityMin>
+		<fertilitySensitivity>0.5</fertilitySensitivity>
+		<growDays>3</growDays>
+		<wildClusterSizeRange>
+        <min>2</min>
+        <max>5</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>4</wildClusterRadius>
+      <visualSizeRange>
+        <min>1.4</min>
+        <max>2.0</max>
+      </visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+    </plant>
+  </ThingDef>
 
 
   <!--======================= Wild plants - carpets ========================-->
 
-  <ThingDef ParentName="PlantBase">
+  <!-- <ThingDef ParentName="PlantBase">
     <defName>PlantGrass</defName>
     <label>grass</label>
     <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
@@ -108,23 +195,102 @@
       <nutrition>0.15</nutrition>
     </ingestible>
     <plant>
-			<fertilityMin>0.05</fertilityMin>
-			<fertilitySensitivity>0.3</fertilitySensitivity>
-			<growDays>2.5</growDays>
-			<leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
+		<fertilityMin>0.05</fertilityMin>
+		<fertilitySensitivity>0.3</fertilitySensitivity>
+		<growDays>2.5</growDays>
+		<leaflessGraphicPath>Things/Plant/Grass_Leafless</leaflessGraphicPath>
       <harvestWork>40</harvestWork>
       <maxMeshCount>9</maxMeshCount>
       <visualSizeRange>
-        <min>0.4</min>
-        <max>0.6</max>
+        <min>0.5</min>
+        <max>0.8</max>
       </visualSizeRange>
       <topWindExposure>0.4</topWindExposure>
+      <reproduceMtbDays>3</reproduceMtbDays>
+    </plant>
+  </ThingDef> -->
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>BT_Temp_GrassG</defName>
+    <label>grass</label>
+    <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Beauty>2</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>BT/Temp/GrassG</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
+    <ingestible>
+      <nutrition>0.15</nutrition>
+    </ingestible>
+    <plant>
+		<sowTags>
+			<li>/Soil</li>
+		</sowTags>
+		<fertilityMin>0.05</fertilityMin>
+		<fertilitySensitivity>0.3</fertilitySensitivity>
+		<growDays>2.5</growDays>
+      <harvestWork>40</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>
+        <min>1.25</min>
+        <max>2.0</max>
+      </visualSizeRange>
+	  <!-- <wildClusterSizeRange>
+        <min>10</min>
+        <max>20</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>6</wildClusterRadius> -->
+      <!-- <topWindExposure>0.4</topWindExposure> -->
+      <reproduceMtbDays>3</reproduceMtbDays>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantBase">
+    <defName>BT_Temp_GrassY</defName>
+    <label>dry grass</label>
+    <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Beauty>2</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>BT/Temp/GrassY</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
+    <ingestible>
+      <nutrition>0.15</nutrition>
+    </ingestible>
+    <plant>
+		<sowTags>
+			<li>/Plains</li>
+			<li>/Gravel</li>
+		</sowTags>
+		<fertilityMin>0.05</fertilityMin>
+		<fertilitySensitivity>0.3</fertilitySensitivity>
+		<growDays>2.5</growDays>
+      <harvestWork>40</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>
+        <min>1.0</min>
+        <max>3.5</max>
+      </visualSizeRange>
+	  <!-- <wildClusterSizeRange>
+        <min>10</min>
+        <max>20</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>6</wildClusterRadius> -->
+      <topWindExposure>0.3</topWindExposure>
       <reproduceMtbDays>3</reproduceMtbDays>
     </plant>
   </ThingDef>
 
 
-  <ThingDef ParentName="PlantBase">
+  <!-- <ThingDef ParentName="PlantBase">
     <defName>PlantDandelion</defName>
     <label>dandelions</label>
     <description>A common small flower. Though it is often considered a weed, it is pleasant to look at.</description>
@@ -136,33 +302,34 @@
       <texPath>BT/Plant/Dandelion</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
-    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
     <ingestible>
       <nutrition>0.14</nutrition>
     </ingestible>
     <plant>
-			<fertilitySensitivity>0.0</fertilitySensitivity>
-			<growDays>2.5</growDays>
-			<sowTags>
-        <li>Ground</li>
-      </sowTags>
-      <fertilityMin>0.05</fertilityMin>
-      <maxMeshCount>25</maxMeshCount>
-      <visualSizeRange>
-        <min>0.3</min>
-        <max>0.6</max>
-      </visualSizeRange>
+		<fertilitySensitivity>0.0</fertilitySensitivity>
+		<growDays>2.5</growDays>
+		<sowTags>
+			<li>Ground</li>
+		</sowTags>
+		<fertilityMin>0.05</fertilityMin>
+		<maxMeshCount>9</maxMeshCount>
+		<visualSizeRange>
+			<min>1.0</min>
+			<max>2.0</max>
+		</visualSizeRange>
       <topWindExposure>0.3</topWindExposure>
       <reproduceMtbDays>3</reproduceMtbDays>
       <wildClusterSizeRange>
-        <min>5</min>
-        <max>10</max>
+        <min>4</min>
+        <max>20</max>
       </wildClusterSizeRange>
-      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterRadius>6</wildClusterRadius>
+	  <blockAdjacentSow>true</blockAdjacentSow>
     </plant>
-  </ThingDef>
+  </ThingDef> -->
 
-  <ThingDef ParentName="PlantBase">
+  <!-- <ThingDef ParentName="PlantBase">
     <defName>PlantAstragalus</defName>
     <label>astragalus</label>
     <description>A small perennial wildflower that grows in alpine climates.</description>
@@ -210,7 +377,7 @@
       <texPath>Things/Plant/Moss</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
-    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <hideAtSnowDepth>0.3</hideAtSnowDepth>
     <ingestible>
       <nutrition>0.10</nutrition>
     </ingestible>
@@ -227,36 +394,44 @@
       </visualSizeRange>
       <topWindExposure>0.0</topWindExposure>
     </plant>
-  </ThingDef>
+  </ThingDef> -->
 
 
   <!--============================ Wild - Trees ============================-->
 
-  <ThingDef ParentName="TreeBase">
-    <defName>PlantTreeOak</defName>
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreeOak</defName>
     <label>oak tree</label>
     <description>A strong hardwood tree. Slow-going, but its wood is very strong.</description>
     <graphicData>
-      <texPath>Things/Plant/TreeOak</texPath>
+      <texPath>BT/Tree/TreeOak</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <statBases>
       <Beauty>5</Beauty>
     </statBases>
     <plant>
-			<growDays>30</growDays>
-			<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<visualSizeRange>
+			<min>2.0</min>
+			<max>3.0</max>
+		</visualSizeRange>
+		<growDays>30</growDays>
+		<leaflessGraphicPath>Things/Plant/TreeOak_Leafless</leaflessGraphicPath>
       <harvestWork>1000</harvestWork>
       <harvestYield>50</harvestYield>
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TreeBase">
-    <defName>PlantTreePoplar</defName>
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreePoplar</defName>
     <label>poplar tree</label>
     <description>A softwood tree. Grows fast, but yield little useful wood.</description>
     <graphicData>
-      <texPath>Things/Plant/TreePoplar</texPath>
+      <texPath>BT/Tree/TreePoplar</texPath>
       <graphicClass>Graphic_Random</graphicClass>
     </graphicData>
     <statBases>
@@ -266,19 +441,26 @@
       <nutrition>0.75</nutrition>
     </ingestible>
     <plant>
-			<growDays>15.05</growDays>
-			<leaflessGraphicPath>Things/Plant/TreePoplar_Leafless</leaflessGraphicPath>
-			<harvestWork>650</harvestWork>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<visualSizeRange>
+			<min>2.0</min>
+			<max>3.25</max>
+		</visualSizeRange>
+		<growDays>15.05</growDays>
+		<harvestWork>650</harvestWork>
       <harvestYield>30</harvestYield>
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TreeBase">
-    <defName>PlantTreePine</defName>
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreePine</defName>
     <label>pine tree</label>
     <description>A large conifer.</description>
     <graphicData>
-      <texPath>BT/Plant/TreePine</texPath>
+      <texPath>BT/Tree/TreePine</texPath>
       <graphicClass>Graphic_Random</graphicClass>
         <shadowData>
           <volume>(0.2, 0.3, 0.2)</volume>
@@ -290,10 +472,14 @@
     <ingestible>
       <nutrition>1</nutrition>
     </ingestible>
-		<plant>
-			<growDays>20</growDays>
-			<visualSizeRange>
-        <min>1.3</min>
+	<plant>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<growDays>20</growDays>
+		<visualSizeRange>
+        <min>2.5</min>
         <max>3.0</max>
       </visualSizeRange>
       <harvestWork>700</harvestWork>
@@ -301,12 +487,12 @@
     </plant>
   </ThingDef>
 
-  <ThingDef ParentName="TreeBase">
-    <defName>PlantTreeBirch</defName>
-    <label>birch tree</label>
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreeBirch</defName>
+    <label>green birch tree</label>
     <description>A northern tree known for its thin, paper-like bark.</description>
     <graphicData>
-      <texPath>Things/Plant/TreeBirch</texPath>
+      <texPath>BT/Tree/TreeBirch</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.15, 0.3, 0.1)</volume>
@@ -317,12 +503,83 @@
     </statBases>
     <ingestible>
       <nutrition>1</nutrition>
-    </ingestible><plant>
-			<growDays>20</growDays>
-			<leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
+    </ingestible>
+	<plant>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<visualSizeRange>
+			<min>2.0</min>
+			<max>3.5</max>
+		</visualSizeRange>
+		<growDays>20</growDays>
       <harvestWork>700</harvestWork>
       <harvestYield>30</harvestYield>
-      <leaflessGraphicPath>Things/Plant/TreeBirch_Leafless</leaflessGraphicPath>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreeOBirch</defName>
+    <label>orange birch tree</label>
+    <description>A northern tree known for its thin, paper-like bark.</description>
+    <graphicData>
+      <texPath>BT/Tree/TreeOBirch</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>1</nutrition>
+    </ingestible>
+	<plant>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<visualSizeRange>
+			<min>2.0</min>
+			<max>3.5</max>
+		</visualSizeRange>
+		<growDays>20</growDays>
+      <harvestWork>700</harvestWork>
+      <harvestYield>30</harvestYield>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="BT_TreeBase">
+    <defName>BT_TreeRBirch</defName>
+    <label>red birch tree</label>
+    <description>A northern tree known for its thin, paper-like bark.</description>
+    <graphicData>
+      <texPath>BT/Tree/TreeRBirch</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.15, 0.3, 0.1)</volume>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>3</Beauty>
+    </statBases>
+    <ingestible>
+      <nutrition>1</nutrition>
+    </ingestible>
+	<plant>
+		<sowTags>
+			<li>/Soil</li>
+			<li>Clump</li>
+		</sowTags>
+		<visualSizeRange>
+			<min>2.0</min>
+			<max>3.5</max>
+		</visualSizeRange>
+		<growDays>20</growDays>
+      <harvestWork>700</harvestWork>
+      <harvestYield>30</harvestYield>
     </plant>
   </ThingDef>
 

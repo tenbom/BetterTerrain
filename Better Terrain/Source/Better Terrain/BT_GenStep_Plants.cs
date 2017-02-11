@@ -32,42 +32,98 @@ namespace Better_Terrain
 			BT_MapConditionManager condMan = new BT_MapConditionManager(map);
 			map.regionAndRoomUpdater.Enabled = false;
 			List<ThingDef> list = map.Biome.AllWildPlants.ToList<ThingDef>();
-			List<ThingDef> treeList = new List<ThingDef>();
-			int numTrees = 0;
-			List<ThingDef> fillerList = new List<ThingDef>();
-			int numFiller = 0;
-			List<ThingDef> grassList = new List<ThingDef>();
-			int numGrass = 0;
-			List<ThingDef> choiceList = new List<ThingDef>();
-			int numChoices = 0;
+			
+			//FINDING OUT WHAT PLANTS THERE ARE AND WHERE THEY SHOULD BE SPAWNED, either in fertile or unfertile soil and scatter randomly or clumped up
+			List<ThingDef> fertClumpList = new List<ThingDef>();
+			int numFClump = 0;
+			List<ThingDef> fertScattList = new List<ThingDef>();
+			int numFScatt = 0;
+			List<ThingDef> unfertClumpList = new List<ThingDef>();
+			int numUClump = 0;
+			List<ThingDef> unfertScattList = new List<ThingDef>();
+			int numUScatt = 0;
+			List<ThingDef> untaggedList = new List<ThingDef>();
+			int numUntagged = 0;
+			
+			//BT_PlantsByWeight fPlants = new PlantsByWeight();
+			//BT_PlantsByWeight ufPlants = new PlantsByWeight();
+			
+			bool arePlants = false;
+			bool fert =false;
+			bool unfert = false;
+			bool clump=false;
+			
 			foreach(ThingDef thing in list)
 			{
-				if(thing.plant.blockAdjacentSow)
+				arePlants = true;
+				fert = false;
+				unfert = false;
+				clump = false;
+				foreach(String tag in thing.plant.sowTags)
 				{
-					treeList.Add(thing);
-					numTrees++;
+					if(tag == "Fert")
+					{
+						fert = true;
+					}
+					else if(tag=="Clump")
+					{
+						clump = true;
+					}
+					else if(tag == "Unfert")
+					{
+						unfert = true;
+					}
 				}
-				else if(thing.hideAtSnowDepth>.35)
+				
+				if(fert)
+			    {
+			   		if(clump)
+					{
+			   			fertClumpList.Add(thing);
+				   		numFClump++;
+				   		//fPlants.addC
+			   		}
+			   		else
+			   		{
+			   			fertScattList.Add(thing);
+						numFScatt++;
+			   		}
+			    }
+				else if(unfert)
 				{
-					fillerList.Add(thing);
-					numFiller++;
+					if(clump)
+					{
+						unfertClumpList.Add(thing);
+				   		numUClump++;
+				   		//unfertCom = unfertPerlinList.Add(new BT_PlantWeightModule(thing, unfertCom);
+				   	}
+					else
+					{
+						unfertScattList.Add(thing);
+						numUScatt++;
+					}
 				}
 				else
 				{
-					grassList.Add(thing);
-					numGrass++;
+					untaggedList.Add(thing);
+					numUntagged++;
 				}
 			}
+			if(!arePlants){
+				untaggedList.Add(ThingDefOf.PlantGrass);
+				numUntagged++;
+			}
+			
 			for (int i = 0; i < list.Count; i++)
 			{
 				BT_GenStep_Plants.numExtant.Add(list[i], 0);
 			}
 			BT_GenStep_Plants.desiredProportions = GenPlant.CalculateDesiredPlantProportions(map.Biome);
 			
+			List<ThingDef> canPlaceList = new List<ThingDef>();
 			float num = map.Biome.plantDensity * condMan.AggregatePlantDensityFactor();
-//			if(Find.WorldGrid[map.Tile].biome == BiomeDefOf.BorealForest)
-//			{
-			MapGenFloatGrid plantGrid = MapGenerator.FloatGridNamed("Tree", map);
+			
+			MapGenFloatGrid plantDensity = MapGenerator.FloatGridNamed("PlantDensity", map);
 			foreach (IntVec3 c in map.AllCells.InRandomOrder(null))
 			{
 				if (c.GetEdifice(map) == null && c.GetCover(map) == null)
@@ -81,28 +137,11 @@ namespace Better_Terrain
 						select def;
 						if (source.Any<ThingDef>())
 						{
-							choiceList.Clear();
-							numChoices = 0;
-							if(num2>.5 && numTrees>0)
-							{
-								choiceList.Add(treeList[(int)(plantGrid[c]*numTrees)]);
-								numChoices++;
-							}
-							if(numFiller>0)
-							{
-								choiceList.Add(fillerList[(int)(plantGrid[c]*numFiller)]);
-								numChoices++;
-							}
-							if(numGrass>0)
-							{
-								choiceList.Add(grassList[(int)(plantGrid[c]*numGrass)]);
-								numChoices++;
-							}
-							//else choiceList.Add(ThingDefOf.PlantGrass);
-							ThingDef thingDef = choiceList[Rand.Range(0,numChoices)];
+							List<ThingDef> plants = BT_GenStep_Plants.getPlantsAt(map, c);
+							//List<ThingDef> plants =  map.Biome.AllWildPlants.ToList<ThingDef>();
+							//plants.Add(ThingDefOf.PlantGrass);
 							
-							
-							//thingDef = source.RandomElementByWeight((ThingDef x) => BT_GenStep_Plants.PlantChoiceWeight(x, map));
+							ThingDef thingDef = plants.RandomElementByWeight((ThingDef x) => BT_GenStep_Plants.PlantChoiceWeight(x, map));
 							int randomInRange = thingDef.plant.wildClusterSizeRange.RandomInRange;
 							for (int j = 0; j < randomInRange; j++)
 							{
@@ -111,7 +150,7 @@ namespace Better_Terrain
 								{
 									c2 = c;
 								}
-								else if (!GenPlantReproduction.TryFindReproductionDestination(c, thingDef, SeedTargFindMode.MapGenCluster, map, out c2))
+								else if (!BT_GenPlantReproduction.TryFindReproductionDestination(c, thingDef, SeedTargFindMode.MapGenCluster, map, plantDensity[c], out c2))
 								{
 									break;
 								}
@@ -155,6 +194,58 @@ namespace Better_Terrain
 			Dictionary<ThingDef, int> expr_11 = dictionary = BT_GenStep_Plants.numExtant;
 			int num = dictionary[plantDef];
 			expr_11[plantDef] = num + 1;
+		}
+		
+		private static List<ThingDef> getPlantsAt(Map map, IntVec3 c)
+		{
+			List<ThingDef> list = map.Biome.AllWildPlants.ToList<ThingDef>();
+			List<ThingDef> clumpPlants = new List<ThingDef>();
+			List<ThingDef> scatterPlants = new List<ThingDef>();
+			
+			TerrainDef terrain = map.terrainGrid.TerrainAt(c);
+			
+			bool onTerrain;
+			bool isClump;
+			bool isKnown;
+			foreach(ThingDef thing in list)
+			{
+				onTerrain = false;
+				isClump = false;
+				isKnown = false;
+				foreach(String tag in thing.plant.sowTags)
+				{
+					//if the tag is designating a terrain it is to be placed on
+					if(tag[0] == '/')
+					{
+						isKnown = true;
+						//check to see if that string matches this terrain
+						if(terrain.texturePath.Contains(tag))
+						{
+							onTerrain = true;
+						}
+					}
+					else if(tag == "Clump") isClump = true;
+				}
+				if(onTerrain)
+				{
+					if(isClump) clumpPlants.Add(thing);
+					else scatterPlants.Add(thing);
+				}
+				else if(!isKnown)
+				{
+					scatterPlants.Add(thing);
+				}
+			}
+			
+			MapGenFloatGrid plantGrid = MapGenerator.FloatGridNamed("Plant", map);
+			int num = clumpPlants.Count;
+			if(num>0)
+			{
+				num = (int)(clumpPlants.Count*plantGrid[c]);
+				scatterPlants.Add(clumpPlants[num]);
+			}
+			if(scatterPlants.Count ==0) scatterPlants.Add(list[0]); //add an item
+			return scatterPlants;
 		}
 	}
 }

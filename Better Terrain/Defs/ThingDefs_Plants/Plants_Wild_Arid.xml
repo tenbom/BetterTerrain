@@ -3,7 +3,7 @@
 
   <!--===========================  Wild - clustering bushes (some harvestable) ==============================-->
   
-  <ThingDef ParentName="PlantBase">
+  <!-- <ThingDef ParentName="PlantBase">
     <defName>PlantBorealDebris</defName>
     <label>debris</label>
     <description>Twigs and mulch.</description>
@@ -38,17 +38,17 @@
       </wildClusterSizeRange>
       <wildClusterRadius>4</wildClusterRadius>
     </plant>
-  </ThingDef>
-
-  <ThingDef ParentName="PlantBase">
-    <defName>PlantShrub</defName>
-    <label>shrub</label>
-    <description>A short shrub. Does not typically talk.</description>
+  </ThingDef> -->
+  
+   <ThingDef ParentName="PlantBase">
+    <defName>BT_Shurb_Flax</defName>
+    <label>flax</label>
+    <description>A short flax. Does not flax typically.</description>
     <statBases>
       <MaxHitPoints>120</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>BT/Plant/Shrub</texPath>
+      <texPath>BT/Shrub/Flax</texPath>
       <graphicClass>Graphic_Random</graphicClass>
        <shadowData>
          <volume>(0.55, 0.2, 0.2)</volume>
@@ -61,13 +61,58 @@
       <nutrition>0.17</nutrition>
     </ingestible>
     <plant>
-			<fertilityMin>0.4</fertilityMin>
-			<fertilitySensitivity>0.5</fertilitySensitivity>
-			<growDays>3</growDays>
-			<leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
-			<wildClusterSizeRange>
-        <min>2</min>
-        <max>5</max>
+		<sowTags>
+			<li>Unfert</li>
+			<li>Clump</li>
+		</sowTags>
+		<fertilityMin>0.4</fertilityMin>
+		<fertilitySensitivity>0.5</fertilitySensitivity>
+		<growDays>3</growDays>
+		<leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
+		<wildClusterSizeRange>
+			<min>2</min>
+			<max>5</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>4</wildClusterRadius>
+      <visualSizeRange>
+        <min>0.6</min>
+        <max>1.1</max>
+      </visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>PlantShrub</defName>
+    <label>shrub</label>
+    <description>A short shrub. Does not typically talk.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+    </statBases>
+    <graphicData>
+      <texPath>BT/Shrub/Shrub</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+       <shadowData>
+         <volume>(0.55, 0.2, 0.2)</volume>
+       </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <fillPercent>0.25</fillPercent>
+    <pathCost>30</pathCost>
+    <ingestible>
+      <nutrition>0.17</nutrition>
+    </ingestible>
+    <plant>
+		<sowTags>
+			<li>Unfert</li>
+		</sowTags>
+		<fertilityMin>0.4</fertilityMin>
+		<fertilitySensitivity>0.5</fertilitySensitivity>
+		<growDays>3</growDays>
+		<leaflessGraphicPath>Things/Plant/Bush_Leafless</leaflessGraphicPath>
+		<wildClusterSizeRange>
+			<min>2</min>
+			<max>5</max>
       </wildClusterSizeRange>
       <wildClusterRadius>4</wildClusterRadius>
       <visualSizeRange>
@@ -78,7 +123,7 @@
     </plant>
   </ThingDef>
   
-  <!-- <ThingDef ParentName="PlantBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantAgave</defName>
     <label>agave</label>
     <description>A large-leafed desert plant with edible flowers and stalks.</description>
@@ -119,7 +164,7 @@
       </wildClusterSizeRange>
       <wildClusterRadius>4</wildClusterRadius>
     </plant>
-  </ThingDef> -->
+  </ThingDef>
 
 
 
@@ -128,7 +173,7 @@
   <!--============================ Wild - Cacti ============================-->
 
 
-  <!-- <ThingDef ParentName="PlantBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantSaguaroCactus</defName>
     <label>saguaro cactus</label>
     <description>A large cactus native to arid Earth environments.</description>
@@ -211,7 +256,7 @@
       <wildClusterRadius>4</wildClusterRadius>
       <maxMeshCount>4</maxMeshCount>
     </plant>
-  </ThingDef> -->
+  </ThingDef>
 
 
 

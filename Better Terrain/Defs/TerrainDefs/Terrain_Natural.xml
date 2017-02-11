@@ -4,7 +4,7 @@
   <TerrainDef>
     <defName>Sand</defName>
     <label>sand</label>
-    <texturePath>Terrain/Surfaces/Sand</texturePath>
+    <texturePath>BT/Surfaces/Sand</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>350</RenderPrecedence>
     <PathCost>4</PathCost>
@@ -22,11 +22,55 @@
     <Fertility>0.06</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
-
+  
   <TerrainDef>
-    <defName>Soil</defName>
-    <label>soil</label>
-    <texturePath>Terrain/Surfaces/Soil</texturePath>
+    <defName>TSandPlains</defName>
+    <label>sandy plains</label>
+    <texturePath>BT/Surfaces/SandPlains</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>350</RenderPrecedence>
+    <PathCost>4</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>SoftDry</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthSand</TerrainFilthDef>
+    <Fertility>0.06</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>SoilRich</defName>
+    <label>rich soil</label>
+    <texturePath>BT/Surfaces/SoilRich</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>335</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>1.25</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>SoilGood</defName>
+    <label>good soil</label>
+    <texturePath>BT/Surfaces/SoilGood</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>340</RenderPrecedence>
     <PathCost>2</PathCost>
@@ -42,14 +86,60 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.9</Fertility>
+    <Fertility>1.0</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>Soil</defName>
+    <label>soil</label>
+    <texturePath>BT/Surfaces/SoilTemperate</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>340</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>0.85</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>SoilMarsh</defName>
+    <label>soil</label>
+    <texturePath>BT/Surfaces/SoilMarsh</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>340</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>1.0</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
   
   <TerrainDef>
     <defName>SoilBoreal</defName>
     <label>soil</label>
-    <texturePath>BT/Surfaces/SoilBoreal</texturePath>
+    <texturePath>BT/Surfaces/SoilTundra</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>340</RenderPrecedence>
     <PathCost>2</PathCost>
@@ -88,9 +178,27 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.35</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <Fertility>0.75</Fertility>
+    <TakeFootprints>false</TakeFootprints>
   </TerrainDef>
+  
+ <!--  <TerrainDef>
+    <defName>BorealStone</defName>
+    <label>granite</label>
+    <texturePath>BT/Surfaces/BorealStone</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>320</RenderPrecedence>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+    </affordances>
+    <TakeFootprints>False</TakeFootprints>
+  </TerrainDef> -->
   
   <TerrainDef>
     <defName>GravelSoil</defName>
@@ -112,7 +220,7 @@
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
     <Fertility>0.75</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <TakeFootprints>false</TakeFootprints>
   </TerrainDef>
   
   <!-- <TerrainDef>
@@ -140,9 +248,9 @@
   </TerrainDef> -->
 
   <TerrainDef>
-    <defName>MarshyTerrain</defName>
+    <defName>TropicTerrain</defName>
     <label>marshy soil</label>
-    <texturePath>Terrain/Surfaces/MarshyTerrain</texturePath>
+    <texturePath>BT/Surfaces/Tropic</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>337</RenderPrecedence>
     <PathCost>15</PathCost>
@@ -164,9 +272,9 @@
   </TerrainDef>
   
   <TerrainDef>
-    <defName>MarshGravel</defName>
+    <defName>GravelMarsh</defName>
     <label>marsh gravel</label>
-    <texturePath>BT/Surfaces/MarshGravel</texturePath>
+    <texturePath>BT/Surfaces/GravelMarsh</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>337</RenderPrecedence>
     <PathCost>15</PathCost>
@@ -183,14 +291,48 @@
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
     <Fertility>0.25</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <TakeFootprints>False</TakeFootprints>
     <driesTo>Soil</driesTo>
   </TerrainDef>
   
   <TerrainDef>
-    <defName>MarshWater1</defName>
+    <defName>SoilSandWater</defName>
+    <label>sandy water</label>
+    <texturePath>BT/Surfaces/SoilSandWater</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>393</RenderPrecedence>
+    <PathCost>23</PathCost>
+    <statBases>
+      <Beauty>-2</Beauty>
+      <Cleanliness>-2</Cleanliness>
+    </statBases>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>1.0</Fertility>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+		<holdSnow>false</holdSnow>
+    <driesTo>Gravel</driesTo>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>WaterShallow</defName>
+    <label>shallow water</label>
+    <texturePath>BT/Surfaces/WaterShallow</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>394</RenderPrecedence>
+    <PathCost>12</PathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>true</avoidWander>
+    <changeable>false</changeable>
+		<holdSnow>false</holdSnow>
+    <driesTo>Gravel</driesTo>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>WaterMarsh1</defName>
     <label>marsh water</label>
-    <texturePath>BT/Surfaces/MarshWater</texturePath>
+    <texturePath>BT/Surfaces/WaterMarsh</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>393</RenderPrecedence>
     <PathCost>23</PathCost>
@@ -207,9 +349,9 @@
   </TerrainDef>
   
   <TerrainDef>
-    <defName>MarshWater2</defName>
+    <defName>WaterMarsh2</defName>
     <label>marsh water</label>
-    <texturePath>BT/Surfaces/MarshWater</texturePath>
+    <texturePath>BT/Surfaces/WaterMarsh</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>392</RenderPrecedence>
     <PathCost>23</PathCost>
@@ -226,31 +368,9 @@
   </TerrainDef>
 
   <TerrainDef>
-    <defName>SoilRich</defName>
-    <label>rich soil</label>
-    <texturePath>BT/Surfaces/SoilRich</texturePath>
-    <EdgeType>FadeRough</EdgeType>
-    <RenderPrecedence>335</RenderPrecedence>
-    <PathCost>2</PathCost>
-    <statBases>
-      <Beauty>-1</Beauty>
-      <Cleanliness>-1</Cleanliness>
-    </statBases>
-    <affordances>
-      <li>Light</li>
-      <li>Heavy</li>
-      <li>GrowSoil</li>
-      <li>Diggable</li>
-    </affordances>
-    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>1.4</Fertility>
-    <TakeFootprints>True</TakeFootprints>
-  </TerrainDef>
-
-  <TerrainDef>
-    <defName>Mud</defName>
+    <defName>SoilMud</defName>
     <label>mud</label>
-    <texturePath>BT/Surfaces/Mud</texturePath>
+    <texturePath>BT/Surfaces/SoilMud</texturePath>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>330</RenderPrecedence>
     <PathCost>12</PathCost>
@@ -259,8 +379,8 @@
       <Cleanliness>-2</Cleanliness>
     </statBases>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.2</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <Fertility>0.125</Fertility>
+    <TakeFootprints>False</TakeFootprints>
     <acceptFilth>false</acceptFilth>
     <avoidWander>true</avoidWander>
     <driesTo>Soil</driesTo>
@@ -278,8 +398,8 @@
       <Cleanliness>-2</Cleanliness>
     </statBases>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.2</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <Fertility>0.6</Fertility>
+    <TakeFootprints>False</TakeFootprints>
     <acceptFilth>false</acceptFilth>
     <avoidWander>true</avoidWander>
     <driesTo>Soil</driesTo>
@@ -305,7 +425,7 @@
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
     <Fertility>0.3</Fertility>
-    <TakeFootprints>True</TakeFootprints>
+    <TakeFootprints>False</TakeFootprints>
   </TerrainDef>
 
   <!-- <TerrainDef>

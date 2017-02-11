@@ -25,10 +25,18 @@ namespace Better_Terrain
 			//FERTILITY
 			ModuleBase moduleBase3 = new Perlin(0.008, 7.0, 0.3, 6, Rand.Range(0, 2147483647), QualityMode.High);
 			moduleBase3 = new ScaleBias(0.65, 0.25, moduleBase3);
-			//TREE
-			ModuleBase moduleBase4 = new Perlin(0.008, 7.0, 0.3, 6, Rand.Range(0, 2147483647), QualityMode.High);
-			moduleBase4 = new ScaleBias(0.5, 0.5, moduleBase4);
-			moduleBase4 = new Clamp(0.0, 0.99, moduleBase4);
+			//Plant
+			ModuleBase mPlant = new Perlin(0.01, 6.0, 0.35, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
+			mPlant = new ScaleBias(0.6, 0.6, mPlant);
+			mPlant = new Clamp(0.0, 0.99, mPlant);
+			//Plant Density
+			ModuleBase mPlantDensity = new Perlin(0.02, 2.0, 0.5, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
+			mPlantDensity = new ScaleBias(0.7, 0.6, mPlantDensity);
+			mPlantDensity = new Clamp(0.5, 1.45, mPlantDensity);
+			//Rock scatter
+			ModuleBase mHardStone = new Perlin(0.15, 1.0, 0.3, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
+			mHardStone = new ScaleBias(1.0, 0.2, mHardStone);
+			mPlantDensity = new Clamp(-1.0, 0.6, mPlantDensity);
 			
 			
 			NoiseDebugUI.StoreNoiseRender(moduleBase, "elev base");
@@ -103,10 +111,18 @@ namespace Better_Terrain
 			{
 				mapGenFloatGrid2[current2] = moduleBase3.GetValue(current2);
 			}
-			MapGenFloatGrid mapGenFloatGrid3 = MapGenerator.FloatGridNamed("Tree", map);
+			MapGenFloatGrid mapGenFloatGrid3 = MapGenerator.FloatGridNamed("Plant", map);
+			MapGenFloatGrid mapGenFloatGrid4 = MapGenerator.FloatGridNamed("PlantDensity", map);
+			MapGenFloatGrid mapGenFloatGrid5 = MapGenerator.FloatGridNamed("HardStone", map);
 			foreach (IntVec3 current3 in map.AllCells)
 			{
-				mapGenFloatGrid3[current3] = moduleBase4.GetValue(current3);
+				mapGenFloatGrid3[current3] = mPlant.GetValue(current3);
+				mapGenFloatGrid4[current3] = mPlantDensity.GetValue(current3);
+				mapGenFloatGrid5[current3] = mHardStone.GetValue(current3);
+			}
+			foreach (IntVec3 current4 in map.AllCells)
+			{
+				
 			}
 		}
 	}

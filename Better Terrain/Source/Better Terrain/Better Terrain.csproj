@@ -72,7 +72,6 @@
     <Compile Include="BT_GenStep_Terrain.cs" />
     <Compile Include="BT_MapConditionManager.cs" />
     <Compile Include="BT_GenPlantReproduction.cs" />
-    <Compile Include="BT_ThingDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

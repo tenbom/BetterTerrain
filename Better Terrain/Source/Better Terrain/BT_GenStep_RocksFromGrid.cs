@@ -18,10 +18,10 @@ namespace Better_Terrain
 
 		private const int MinRoofedCellsPerGroup = 20;
 
-		public static ThingDef RockDefAt(IntVec3 c)
+		public static ThingDef RockDefAt(Map map, IntVec3 c)
 		{
-			ThingDef thingDef = null;
-			float num = -999999f;
+			float num = MapGenerator.FloatGridNamed("HardStone", map)[c];
+			ThingDef thingDef = ThingDefOf.Sandstone;
 			for (int i = 0; i < RockNoises.rockNoises.Count; i++)
 			{
 				float value = RockNoises.rockNoises[i].noise.GetValue(c);
@@ -33,8 +33,7 @@ namespace Better_Terrain
 			}
 			if (thingDef == null)
 			{
-				Log.ErrorOnce("Did not get rock def to generate at " + c, 50812);
-				thingDef = ThingDefOf.Sandstone;
+				//Log.ErrorOnce("Did not get rock def to generate at " + c, 50812);
 			}
 			return thingDef;
 		}
@@ -45,6 +44,7 @@ namespace Better_Terrain
 			{
 				return;
 			}
+			
 			map.regionAndRoomUpdater.Enabled = false;
 			float num = 0.15f;
 			List<BT_GenStep_RocksFromGrid.RoofThreshold> list = new List<BT_GenStep_RocksFromGrid.RoofThreshold>();
@@ -71,7 +71,7 @@ namespace Better_Terrain
 				//if((mountainability>num) && (elevation[current]*.3f + fertility[current]*.75f > -.05f))
 				if(mountainability>num)
 				{
-					ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(current);
+					ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(map, current);
 					GenSpawn.Spawn(def, current, map);
 					for (int i = 0; i < list.Count; i++)
 					{

@@ -31,7 +31,7 @@ namespace Better_Terrain
 			return (Plant)GenSpawn.Spawn(plantDef, dest, map);
 		}
 
-		public static bool TryFindReproductionDestination(IntVec3 source, ThingDef plantDef, SeedTargFindMode mode, Map map, out IntVec3 foundCell)
+		public static bool TryFindReproductionDestination(IntVec3 source, ThingDef plantDef, SeedTargFindMode mode, Map map, float perlinDensity, out IntVec3 foundCell)
 		{
 			float radius = -1f;
 			if (mode == SeedTargFindMode.Reproduce)
@@ -68,7 +68,8 @@ namespace Better_Terrain
 					num3 += c2.GetTerrain(map).fertility;
 				}
 			}
-			float num4 = num3 * map.Biome.plantDensity;
+			if(!plantDef.plant.blockAdjacentSow) perlinDensity = 1;
+			float num4 = num3 * map.Biome.plantDensity * perlinDensity;
 			bool flag = (float)num > num4;
 			bool flag2 = (float)num > num4 * 1.25f;
 			if (flag2)
