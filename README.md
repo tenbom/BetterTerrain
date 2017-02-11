@@ -1,5 +1,5 @@
-# Mod getting too big, moving to DropBox
-# BetterTerrain for RimWorld v0.06, code files, no textures.
+# Mod getting too big, moving full download to DropBox
+# BetterTerrain for RimWorld v0.06 ONLY code files.
 
 Rock chunks, people and animals are drawn behind trees.
 Added in 'hard stone'.  10k hp stone.
