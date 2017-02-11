@@ -1,4 +1,10 @@
-# BetterTerrain for RimWorld v0.052
+# Mod getting too big, moving to DropBox
+# BetterTerrain for RimWorld v0.06, code files, no textures.
+
+Rock chunks, people and animals are drawn behind trees.
+Added in 'hard stone'.  10k hp stone.
+Created a tag system, use sowtags to determine which terrain a plant can be placed on in map generation.
+Made all plants this mod uses not override vanilla ones, for compatibility reasons.
 
 More compatibility.
 Tropical forest re-arting is underway.
