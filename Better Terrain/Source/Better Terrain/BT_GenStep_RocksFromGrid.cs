@@ -17,11 +17,34 @@ namespace Better_Terrain
 		}
 
 		private const int MinRoofedCellsPerGroup = 20;
-
-		public static ThingDef RockDefAt(Map map, IntVec3 c)
+		//chooses from the stone types on the map
+		//uses the HardStone perlin distribution to splatter it in there.
+		//if hardstone is a rock type in the region, to keep 2/3 the map from just being unmineable, the -.3f lowers its frequency.
+		public static ThingDef RockDefAt(Map map, IntVec3 c, float mountainability = 0)
 		{
-			float num = MapGenerator.FloatGridNamed("HardStone", map)[c];
-			ThingDef thingDef = ThingDefOf.Sandstone;
+			
+//			float num;
+//			ThingDef thingDef = ThingDefOf.Sandstone;
+//			if(mountainability>.23)
+//			{
+//				num	= MapGenerator.FloatGridNamed("HardStone", map)[c];
+//				num+=(mountainability)*4f;
+//				if(num>1.5) return thingDef;
+//			}
+//			num = -999;
+//			
+//			for (int i = 0; i < RockNoises.rockNoises.Count; i++)
+//			{
+//				float value = RockNoises.rockNoises[i].noise.GetValue(c);
+//				if(RockNoises.rockNoises[i].rockDef == ThingDefOf.Sandstone) value -= .35f;
+//				if (value > num)
+//				{
+//					thingDef = RockNoises.rockNoises[i].rockDef;
+//					num = value;
+//				}
+//			}
+			ThingDef thingDef = null;
+			float num = -999;
 			for (int i = 0; i < RockNoises.rockNoises.Count; i++)
 			{
 				float value = RockNoises.rockNoises[i].noise.GetValue(c);
@@ -33,7 +56,8 @@ namespace Better_Terrain
 			}
 			if (thingDef == null)
 			{
-				//Log.ErrorOnce("Did not get rock def to generate at " + c, 50812);
+				thingDef = ThingDefOf.Sandstone;
+				Log.ErrorOnce("Did not get rock def to generate at " + c, 50812);
 			}
 			return thingDef;
 		}
@@ -58,9 +82,10 @@ namespace Better_Terrain
 				roofDef = RoofDefOf.RoofRockThin,
 				minGridVal = num * 1.04f
 			});
+			//elevation is the ElevationMapGenFloatGrid modified by 'flat' or 'small hills' or 'mountainous'.
 			MapGenFloatGrid elevation = MapGenerator.Elevation;
 			MapGenFloatGrid fertility = MapGenerator.FloatGridNamed("Fertility", map);
-			//==============Create mountains at (high fert and high elev) or (low fert+low elev+not on water), creates sprawling interesting terrain.
+			//Create mountains at high elevation and extreme levels of fertilities (high or low).
 			foreach (IntVec3 current in map.AllCells)
 			{
 				float num2 = elevation[current] - .1f;
@@ -71,7 +96,7 @@ namespace Better_Terrain
 				//if((mountainability>num) && (elevation[current]*.3f + fertility[current]*.75f > -.05f))
 				if(mountainability>num)
 				{
-					ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(map, current);
+					ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(map, current, mountainability);
 					GenSpawn.Spawn(def, current, map);
 					for (int i = 0; i < list.Count; i++)
 					{

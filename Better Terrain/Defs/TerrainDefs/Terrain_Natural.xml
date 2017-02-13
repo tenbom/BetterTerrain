@@ -114,6 +114,52 @@
   </TerrainDef>
   
   <TerrainDef>
+    <defName>Soil</defName>
+    <label>soil</label>
+    <texturePath>BT/Surfaces/SoilTemperate</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>340</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>0.85</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+  
+  <TerrainDef>
+    <defName>SoilTemp</defName>
+    <label>soil</label>
+    <texturePath>BT/Surfaces/SoilTemperate</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>340</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>0.85</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+  </TerrainDef>
+  
+  <TerrainDef>
     <defName>SoilMarsh</defName>
     <label>soil</label>
     <texturePath>BT/Surfaces/SoilMarsh</texturePath>
@@ -330,7 +376,7 @@
   </TerrainDef>
   
   <TerrainDef>
-    <defName>WaterMarsh1</defName>
+    <defName>WaterMarsh</defName>
     <label>marsh water</label>
     <texturePath>BT/Surfaces/WaterMarsh</texturePath>
     <EdgeType>FadeRough</EdgeType>
@@ -341,26 +387,7 @@
       <Cleanliness>-2</Cleanliness>
     </statBases>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0</Fertility>
-    <avoidWander>true</avoidWander>
-    <changeable>false</changeable>
-		<holdSnow>false</holdSnow>
-    <driesTo>Gravel</driesTo>
-  </TerrainDef>
-  
-  <TerrainDef>
-    <defName>WaterMarsh2</defName>
-    <label>marsh water</label>
-    <texturePath>BT/Surfaces/WaterMarsh</texturePath>
-    <EdgeType>FadeRough</EdgeType>
-    <RenderPrecedence>392</RenderPrecedence>
-    <PathCost>23</PathCost>
-    <statBases>
-      <Beauty>-2</Beauty>
-      <Cleanliness>-2</Cleanliness>
-    </statBases>
-    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0</Fertility>
+    <Fertility>0.15</Fertility>
     <avoidWander>true</avoidWander>
     <changeable>false</changeable>
 		<holdSnow>false</holdSnow>

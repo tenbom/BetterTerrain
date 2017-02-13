@@ -6,7 +6,7 @@
   <ThingDef Name="ChunkBase" Abstract="True">
     <category>Item</category>
     <thingClass>Thing</thingClass>
-    <altitudeLayer>LowPlant</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.4</fillPercent>
     <statBases>
@@ -98,21 +98,21 @@
 
   <!-- ================ Sandstone ================ -->
   
-  <ThingDef ParentName="UglyRockBase">
+  <!-- <ThingDef ParentName="UglyRockBase">
     <defName>Sandstone</defName>
-    <label>hard stone</label>
-    <description>No loose rocks here.</description>
+    <label>Mountains</label>
+    <description>Nothing loose here.</description>
     <graphicData>
 	  <color>(126,104,94)</color>
-      <!-- <color>(95,70,60)</color> -->
     </graphicData>
     <statBases>
-      <MaxHitPoints>10000</MaxHitPoints>
+      <MaxHitPoints>2000</MaxHitPoints>
     </statBases>
     <building>
       <mineableThing>ChunkSandstone</mineableThing>
       <mineableDropChance>0.05</mineableDropChance>
     </building>
+	<mineable>false</mineable>
   </ThingDef>
   
   <ThingDef ParentName="UglyRockBase">
@@ -120,8 +120,23 @@
     <label>sandstone</label>
     <description>A sedimentary rock composed of sand particles compressed together.</description>
     <graphicData>
-      <!-- <color>(126,104,94)</color> -->
-	  <color>(95,70,60)</color>
+	  <color>(75,50,43)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>ChunkSandstone</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+    </building>
+  </ThingDef> -->
+  
+  <ThingDef ParentName="UglyRockBase">
+    <defName>Sandstone</defName>
+    <label>sandstone</label>
+    <description>A sedimentary rock composed of sand particles compressed together.</description>
+    <graphicData>
+      <color>(126,104,94)</color>
     </graphicData>
     <statBases>
       <MaxHitPoints>400</MaxHitPoints>
@@ -136,7 +151,7 @@
     <defName>ChunkSandstone</defName>
     <label>sandstone chunk</label>
     <graphicData>
-      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(126,104,94)</color>
     </graphicData>
@@ -211,7 +226,8 @@
     <label>granite</label>
     <description>A very hard igneous rock.</description>
     <graphicData>
-      <color>(105,95,97)</color>
+      <!-- <color>(105,95,97)</color> -->
+	  <color>(75,79,90)</color>
     </graphicData>
     <statBases>
       <MaxHitPoints>900</MaxHitPoints>
@@ -226,7 +242,7 @@
     <defName>ChunkGranite</defName>
     <label>granite chunk</label>
     <graphicData>
-      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(105,95,97)</color>
     </graphicData>
@@ -313,7 +329,7 @@
     <defName>ChunkLimestone</defName>
     <label>limestone chunk</label>
     <graphicData>
-      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(158,153,135)</color>
     </graphicData>
@@ -399,7 +415,7 @@
     <defName>ChunkSlate</defName>
     <label>slate chunk</label>
     <graphicData>
-      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(90,90,90)</color>
     </graphicData>
@@ -487,7 +503,7 @@
     <defName>ChunkMarble</defName>
     <label>marble chunk</label>
     <graphicData>
-      <texPath>Things/Item/Chunk/ChunkStone</texPath>
+      <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <color>(132,135,132)</color>
     </graphicData>

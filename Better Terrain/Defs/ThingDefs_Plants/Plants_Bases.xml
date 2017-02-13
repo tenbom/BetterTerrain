@@ -83,7 +83,7 @@
         <min>4</min>
         <max>10</max>
       </wildClusterSizeRange>
-      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterRadius>3</wildClusterRadius>
     </plant>
   </ThingDef>
 

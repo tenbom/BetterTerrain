@@ -20,7 +20,7 @@ namespace Better_Terrain
 			NoiseRenderer.renderSize = new IntVec2(map.Size.x, map.Size.z);
 			//MOUNTAINITY
 			//ModuleBase moduleBase = new Perlin(0.020999999716877937, 2.0, 0.5, 6, Rand.Range(0, 2147483647), QualityMode.High);
-			ModuleBase moduleBase = new Perlin(0.02, 1.0, 0.75, 6, Rand.Range(0, 2147483647), QualityMode.High);
+			ModuleBase moduleBase = new Perlin(0.02, 3.0, 0.25, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
 			moduleBase = new ScaleBias(0.5, 0.5, moduleBase);
 			//FERTILITY
 			ModuleBase moduleBase3 = new Perlin(0.008, 7.0, 0.3, 6, Rand.Range(0, 2147483647), QualityMode.High);
@@ -30,13 +30,14 @@ namespace Better_Terrain
 			mPlant = new ScaleBias(0.6, 0.6, mPlant);
 			mPlant = new Clamp(0.0, 0.99, mPlant);
 			//Plant Density
-			ModuleBase mPlantDensity = new Perlin(0.02, 2.0, 0.5, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
-			mPlantDensity = new ScaleBias(0.7, 0.6, mPlantDensity);
-			mPlantDensity = new Clamp(0.5, 1.45, mPlantDensity);
+			ModuleBase mPlantDensity = new Perlin(0.015, 1.5, 0.1, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
+			mPlantDensity = new ScaleBias(0.5, 0.9, mPlantDensity);
+			mPlantDensity = new Clamp(0.5, 1.5, mPlantDensity);
 			//Rock scatter
-			ModuleBase mHardStone = new Perlin(0.15, 1.0, 0.3, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
-			mHardStone = new ScaleBias(1.0, 0.2, mHardStone);
-			mPlantDensity = new Clamp(-1.0, 0.6, mPlantDensity);
+			//ModuleBase mHardStone = new Perlin(0.35, 6.5, 0.1, 6, Rand.Range(0, 2147483647), QualityMode.Medium);
+			//mHardStone = new ScaleBias(0.7, 0.25, mHardStone);
+			ModuleBase mHardStone = new Perlin(0.2, 2.0, 0.1, 6, Rand.Range(0, 2147483647), QualityMode.High);
+			mHardStone = new ScaleBias(3.5, 0, mHardStone);
 			
 			
 			NoiseDebugUI.StoreNoiseRender(moduleBase, "elev base");
@@ -44,19 +45,19 @@ namespace Better_Terrain
 			switch (map.TileInfo.hilliness)
 			{
 			case Hilliness.Flat:
-				num = .585f;
+				num = .6f;
 				//num = MapGenTuning.ElevationFactorFlat;
 				break;
 			case Hilliness.SmallHills:
-				num = .775f;
+				num = .8f;
 				//num = MapGenTuning.ElevationFactorSmallHills;
 				break;
 			case Hilliness.LargeHills:
-				num = 1f;
+				num = 1.15f;
 				//num = MapGenTuning.ElevationFactorLargeHills;
 				break;
 			case Hilliness.Mountainous:
-				num = 1.1f;
+				num = 1.3f;
 				//num = MapGenTuning.ElevationFactorMountains;
 				break;
 			case Hilliness.Impassable:

@@ -154,18 +154,28 @@
     </diseases>
     <terrainsByFertility>
 	  <li>
-        <terrain>Plains</terrain>
+        <terrain>Soil</terrain>
         <min>-999</min>
-        <max>-0.12</max>
+        <max>-0.13</max>
       </li>
 	  <li>
         <terrain>SoilSandWater</terrain>
+        <min>-0.13</min>
+        <max>-0.12</max>
+      </li>
+	  <!-- <li>
+        <terrain>WaterShallow</terrain>
+        <min>-0.1225</min>
+        <max>-0.12</max>
+      </li> -->
+	  <li>
+        <terrain>SoilSandWater</terrain>
         <min>-0.12</min>
-        <max>-.09</max>
+        <max>-0.08</max>
       </li>
 	  <li>
         <terrain>Plains</terrain>
-        <min>-0.09</min> 
+        <min>-0.08</min> 
         <max>0.05</max>
       </li>
 	  <li>
@@ -188,14 +198,15 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+		<BT_Temp_GrassY>1</BT_Temp_GrassY>
+		<BT_Temp_GrassG>3</BT_Temp_GrassG>
+		<PlantBush>0.25</PlantBush>
         <PlantAgave>0.25</PlantAgave>
 		<BT_Temp_Raspberry>0.5</BT_Temp_Raspberry>
-        <PlantSaguaroCactus>1</PlantSaguaroCactus>
         <PlantPincushionCactus>1</PlantPincushionCactus>
-        <PlantBush>0.25</PlantBush>
-		<BT_Temp_GrassG>3</BT_Temp_GrassG>
-        <BT_Temp_GrassY>1</BT_Temp_GrassY>
         <PlantDandelion>0.5</PlantDandelion>
+		
+		<PlantSaguaroCactus>1</PlantSaguaroCactus>
         <PlantTreePoplar>1</PlantTreePoplar>
     </wildPlants>
     <wildAnimals>
@@ -273,9 +284,9 @@
       <SnowHard>1</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+	  <PlantGrass>6</PlantGrass>
       <PlantAgave>0.25</PlantAgave>
       <PlantSaguaroCactus>1</PlantSaguaroCactus>
-      <PlantGrass>6</PlantGrass>
     </wildPlants>
     <wildAnimals>
       <Megascarab>1</Megascarab>

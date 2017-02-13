@@ -139,10 +139,10 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+	  <BT_Temp_GrassY>7.0</BT_Temp_GrassY>
+	  <BT_Temp_Bush>2.0</BT_Temp_Bush>
       <BT_Temp_Raspberry>1.0</BT_Temp_Raspberry>
 	  <!-- <BT_Temp_GrassG>7.0</BT_Temp_GrassG> -->
-	  <BT_Temp_Bush>2.0</BT_Temp_Bush>
-	  <BT_Temp_GrassY>7.0</BT_Temp_GrassY>
       <!-- <PlantBush>1.1</PlantBush>
       <PlantGrass>8.0</PlantGrass> -->
       <!-- <PlantBorealDebris>5.0</PlantBorealDebris> -->
@@ -296,13 +296,14 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+	  <PlantMoss>0.05</PlantMoss>
+	  <PlantAstragalus>0.01</PlantAstragalus>
+      <PlantDandelion>0.04</PlantDandelion>
       <PlantRaspberry>0.01</PlantRaspberry>
       <BT_Temp_Bush>0.03</BT_Temp_Bush>
 	  <BT_Temp_Shrub>0.03</BT_Temp_Shrub>
-      <PlantAstragalus>0.01</PlantAstragalus>
-      <PlantDandelion>0.04</PlantDandelion>
       <BT_Temp_GrassG>0.3</BT_Temp_GrassG>
-      <PlantMoss>0.05</PlantMoss>
+      
       <BT_TreePine>0.5</BT_TreePine>
       <!-- <PlantTreeBirch>0.01</PlantTreeBirch> -->
     </wildPlants>

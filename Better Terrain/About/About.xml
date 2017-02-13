@@ -2,9 +2,22 @@
 <ModMetaData>
   <name>Better Terrain</name>
   <author>Tim</author>
-  <targetVersion>0.00.0001</targetVersion>
+  <targetVersion>0.16.1393</targetVersion>
   <description>
     Better Terrain for Rimworld.
-	ONLY TROPICAL FOREST AND TEMPERATE FOREST COMPLETED
+	0.0615
+		This.
+	0.061
+		better hard stone (renamed to Mountain) scattering.
+		Recolored a couple rocks to be easier to pick out from hard stone.
+	0.06
+		stone chunks are placed behind trees!
+		people and animals are too for testings sake, feedback plz.
+		updating art in Tropical Forest, 1/2~ way done atm.
+		15%~ more mountains in mountainous terrain
+		
+		Finished: Temperate Forest
+		Functional:Arid Shrublands, Boreal Forest, Tropical Forest, Tundra.
+		
   </description>
 </ModMetaData>

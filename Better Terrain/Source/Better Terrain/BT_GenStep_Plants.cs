@@ -34,85 +34,9 @@ namespace Better_Terrain
 			List<ThingDef> list = map.Biome.AllWildPlants.ToList<ThingDef>();
 			
 			//FINDING OUT WHAT PLANTS THERE ARE AND WHERE THEY SHOULD BE SPAWNED, either in fertile or unfertile soil and scatter randomly or clumped up
-			List<ThingDef> fertClumpList = new List<ThingDef>();
-			int numFClump = 0;
-			List<ThingDef> fertScattList = new List<ThingDef>();
-			int numFScatt = 0;
-			List<ThingDef> unfertClumpList = new List<ThingDef>();
-			int numUClump = 0;
-			List<ThingDef> unfertScattList = new List<ThingDef>();
-			int numUScatt = 0;
-			List<ThingDef> untaggedList = new List<ThingDef>();
-			int numUntagged = 0;
 			
 			//BT_PlantsByWeight fPlants = new PlantsByWeight();
 			//BT_PlantsByWeight ufPlants = new PlantsByWeight();
-			
-			bool arePlants = false;
-			bool fert =false;
-			bool unfert = false;
-			bool clump=false;
-			
-			foreach(ThingDef thing in list)
-			{
-				arePlants = true;
-				fert = false;
-				unfert = false;
-				clump = false;
-				foreach(String tag in thing.plant.sowTags)
-				{
-					if(tag == "Fert")
-					{
-						fert = true;
-					}
-					else if(tag=="Clump")
-					{
-						clump = true;
-					}
-					else if(tag == "Unfert")
-					{
-						unfert = true;
-					}
-				}
-				
-				if(fert)
-			    {
-			   		if(clump)
-					{
-			   			fertClumpList.Add(thing);
-				   		numFClump++;
-				   		//fPlants.addC
-			   		}
-			   		else
-			   		{
-			   			fertScattList.Add(thing);
-						numFScatt++;
-			   		}
-			    }
-				else if(unfert)
-				{
-					if(clump)
-					{
-						unfertClumpList.Add(thing);
-				   		numUClump++;
-				   		//unfertCom = unfertPerlinList.Add(new BT_PlantWeightModule(thing, unfertCom);
-				   	}
-					else
-					{
-						unfertScattList.Add(thing);
-						numUScatt++;
-					}
-				}
-				else
-				{
-					untaggedList.Add(thing);
-					numUntagged++;
-				}
-			}
-			if(!arePlants){
-				untaggedList.Add(ThingDefOf.PlantGrass);
-				numUntagged++;
-			}
 			
 			for (int i = 0; i < list.Count; i++)
 			{
@@ -128,7 +52,7 @@ namespace Better_Terrain
 			{
 				if (c.GetEdifice(map) == null && c.GetCover(map) == null)
 				{
-					float num2 = map.fertilityGrid.FertilityAt(c);
+					float num2 = map.fertilityGrid.FertilityAt(c) * plantDensity[c];
 					float num3 = num2 * num;
 					if (Rand.Value < num3)
 					{

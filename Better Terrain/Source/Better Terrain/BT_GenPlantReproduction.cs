@@ -68,7 +68,7 @@ namespace Better_Terrain
 					num3 += c2.GetTerrain(map).fertility;
 				}
 			}
-			if(!plantDef.plant.blockAdjacentSow) perlinDensity = 1;
+			//if(!plantDef.plant.blockAdjacentSow) perlinDensity = 1;
 			float num4 = num3 * map.Biome.plantDensity * perlinDensity;
 			bool flag = (float)num > num4;
 			bool flag2 = (float)num > num4 * 1.25f;
