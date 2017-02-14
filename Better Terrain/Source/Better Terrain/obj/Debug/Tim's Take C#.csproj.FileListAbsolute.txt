@@ -1,6 +1,0 @@
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tim's #\Assemblies\Tim's Take C#.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tim's #\Source\Tim's Take C#\obj\Debug\Tim's Take C#.csprojResolveAssemblyReference.cache
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tim's #\Source\Tim's Take C#\obj\Debug\Tim's Take C#.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Sharp\Assemblies\Tims Sharp.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Sharp\Source\Tim's Take C#\obj\Debug\Tim's Take C#.csprojResolveAssemblyReference.cache
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Sharp\Source\Tim's Take C#\obj\Debug\Tims Sharp.dll

@@ -1,9 +1,0 @@
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Source\Tims Sharp\obj\Debug\Better Terrain.csprojResolveAssemblyReference.cache
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Source\Tims Sharp\obj\Debug\Tims Sharp.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Assemblies\Tims Sharp.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Source\Better Terrain\obj\Debug\Better Terrain.csprojResolveAssemblyReference.cache
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Assemblies\Better Terrain.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Source\Better Terrain\obj\Debug\Better Terrain.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Assemblies\Better Terrain.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Source\Better Terrain\obj\Debug\Better Terrain.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Better Terrain\Source\Better Terrain\obj\Debug\Better Terrain.csprojResolveAssemblyReference.cache

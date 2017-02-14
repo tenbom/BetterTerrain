@@ -1,3 +1,0 @@
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Source\Tims Sharp\obj\Debug\Tims Sharp#.csprojResolveAssemblyReference.cache
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Source\Tims Sharp\obj\Debug\Tims Sharp.dll
-E:\Games\Steam\steamapps\common\RimWorld\Mods\Tims Mod\Assemblies\Tims Sharp.dll
