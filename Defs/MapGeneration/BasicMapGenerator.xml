@@ -44,6 +44,13 @@
     <genStep Class="Better_Terrain.BT_GenStep_Terrain"/>
   </GenStepDef>
   
+  <GenStepDef>
+    <defName>Caves</defName>
+    <mapGenerator>BasicMapGenerator</mapGenerator>
+    <order>300</order>
+    <genStep Class="Better_Terrain.GenStepCaves"/>
+  </GenStepDef>
+  
   <!-- <GenStepDef>
     <defName>RockChunks</defName>
     <mapGenerator>BasicMapGenerator</mapGenerator>
