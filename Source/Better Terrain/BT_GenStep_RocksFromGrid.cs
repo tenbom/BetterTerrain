@@ -156,10 +156,10 @@ namespace Better_Terrain
 				break;
 			}
 			if(b == BiomeDefOf.Tundra) 					num3 *= 1.5f;
-			else if(b == BiomeDefOf.TemperateForest) 	num3 -= 6f;
-			else if(b == BiomeDefOf.AridShrubland)		num3 *= 1.4f;
-			else if(b == BiomeDefOf.BorealForest)		num3 *= 1.25f;
-			else if(b == BiomeDefOf.Desert)				num3 *= .7f;
+			else if(b == BiomeDefOf.TemperateForest) 	num3 *= 0.8f;
+			else if(b == BiomeDefOf.AridShrubland)		num3 *= 1.3f;
+			else if(b == BiomeDefOf.BorealForest)		num3 *= 1.2f;
+			else if(b == BiomeDefOf.Desert)				num3 *= 0.65f;
 			genStep_ScatterLumpsMineable.countPer10kCellsRange = new FloatRange(num3, num3);
 			genStep_ScatterLumpsMineable.Generate(map);
 			map.regionAndRoomUpdater.Enabled = true;

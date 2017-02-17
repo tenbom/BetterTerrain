@@ -12,7 +12,8 @@
       <MaxHitPoints>120</MaxHitPoints>
     </statBases>
     <graphicData>
-      <texPath>BT/Temp/Raspberry</texPath>
+      <!-- <texPath>BT/Temp/Raspberry</texPath> -->
+	  <texPath>Things/Plant/Raspberry</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.55, 0.2, 0.2)</volume>

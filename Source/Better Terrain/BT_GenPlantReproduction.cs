@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 using RimWorld;
+using System.Reflection;
 
 namespace Better_Terrain
 {
@@ -30,7 +31,7 @@ namespace Better_Terrain
 			}
 			return (Plant)GenSpawn.Spawn(plantDef, dest, map);
 		}
-
+		
 		public static bool TryFindReproductionDestination(IntVec3 source, ThingDef plantDef, SeedTargFindMode mode, Map map, float perlinDensity, out IntVec3 foundCell)
 		{
 			float radius = -1f;

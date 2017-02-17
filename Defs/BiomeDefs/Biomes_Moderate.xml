@@ -86,7 +86,7 @@
 		  <li>
             <terrain>WaterShallow</terrain>
             <min>-999</min>
-            <max>-0.03</max>
+            <max>-0.02</max>
           </li>
 		 <!--  <li>
             <terrain>MarshyTerrainWater</terrain>
@@ -94,8 +94,8 @@
             <max>-0.14</max>
           </li> -->
 		  <li>
-            <terrain>Mud</terrain>
-            <min>-0.03</min>
+            <terrain>WaterSoilTransition</terrain>
+            <min>-0.02</min>
             <max>-0.01</max>
           </li>
 		  <!-- <li>
@@ -113,21 +113,26 @@
             <min>0.06</min>
             <max>0.13</max>
           </li>
+		  <li>
+            <terrain>SoilGoodSoilTransition</terrain>
+            <min>0.13</min>
+            <max>0.14</max>
+          </li>
           <li>
             <terrain>SoilTemp</terrain>
-            <min>0.13</min>
+            <min>0.14</min>
             <max>0.31</max>
           </li>
 		  <li>
             <terrain>Plains</terrain>
             <min>0.31</min>
-            <max>0.47</max>
-          </li>
-		  <li>
-            <terrain>GravelSoil</terrain>
-            <min>0.47</min>
             <max>0.6</max>
           </li>
+		  <!-- <li>
+            <terrain>Gravel</terrain>
+            <min>0.47</min>
+            <max>0.6</max>
+          </li> -->
           
          <!--  <li>
             <terrain>WaterDeep</terrain>
@@ -295,6 +300,11 @@
 		  <li>
             <terrain>SoilMud</terrain>
             <min>-0.05</min>
+            <max>-0.01</max>
+          </li>
+		  <li>
+            <terrain>TropicMudTransition</terrain>
+            <min>-0.01</min>
             <max>0</max>
           </li>
           <li>
@@ -312,6 +322,11 @@
             <min>0.38</min>
             <max>0.42</max>
           </li> -->
+		  <li>
+            <terrain>WaterTropicTransition</terrain>
+            <min>0.35</min>
+            <max>0.36</max>
+          </li>
 		  <li>
             <terrain>WaterMarsh</terrain>
             <min>0.36</min>

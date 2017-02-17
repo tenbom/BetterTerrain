@@ -153,39 +153,39 @@
       </li>
     </diseases>
     <terrainsByFertility>
-	  <li>
+	  <!-- <li>
         <terrain>Soil</terrain>
         <min>-999</min>
         <max>-0.13</max>
       </li>
 	  <li>
-        <terrain>SoilSandWater</terrain>
+        <terrain>WaterSoilTransition</terrain>
         <min>-0.13</min>
-        <max>-0.12</max>
-      </li>
-	  <!-- <li>
-        <terrain>WaterShallow</terrain>
-        <min>-0.1225</min>
         <max>-0.12</max>
       </li> -->
 	  <li>
-        <terrain>SoilSandWater</terrain>
-        <min>-0.12</min>
-        <max>-0.08</max>
+        <terrain>WaterShallow</terrain>
+        <min>-999</min>
+        <max>-0.14</max>
+      </li>
+	  <li>
+        <terrain>WaterPlainsTransition</terrain>
+        <min>-0.14</min>
+        <max>-0.13</max>
       </li>
 	  <li>
         <terrain>Plains</terrain>
-        <min>-0.08</min> 
-        <max>0.05</max>
+        <min>-0.13</min> 
+        <max>0.03</max>
       </li>
 	  <li>
-        <terrain>TSandPlains</terrain>
-        <min>0.05</min> 
-        <max>0.13</max>
+        <terrain>SandPlainsTransition</terrain>
+        <min>0.03</min> 
+        <max>0.04</max>
       </li>
       <li>
         <terrain>Sand</terrain>
-        <min>0.13</min>
+        <min>0.04</min>
         <max>999</max>
       </li>
     </terrainsByFertility>

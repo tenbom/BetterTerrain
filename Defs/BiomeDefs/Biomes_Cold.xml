@@ -70,21 +70,26 @@
             <min>-999</min>
             <max>-0.08</max>
           </li>
+		  <li>
+            <terrain>WaterSoilTransition</terrain>
+            <min>-0.08</min>
+            <max>-0.07</max>
+          </li>
 		<li>
             <terrain>WaterShallow</terrain>
-            <min>-0.08</min>
+            <min>-0.07</min>
             <max>0.03</max>
+          </li>
+		  <li>
+            <terrain>WaterSoilTransition</terrain>
+            <min>0.03</min>
+            <max>0.04</max>
           </li>
 		 <!--  <li>
             <terrain>MarshyTerrainWater</terrain>
             <min>-0.12</min>
             <max>-0.14</max>
           </li> -->
-		  <li>
-            <terrain>Mud</terrain>
-            <min>0.03</min>
-            <max>0.05</max>
-          </li>
 		  <!-- <li>
             <terrain>MarshyTerrain</terrain>
             <min>-0.14</min>
@@ -92,7 +97,7 @@
           </li> -->
           <li>
             <terrain>SoilBoreal</terrain>
-            <min>0.05</min>
+            <min>0.04</min>
             <max>0.26</max>
           </li>
 		  <!-- <li>
@@ -228,7 +233,7 @@
     </diseases>
     <terrainsByFertility>
       <li>
-        <terrain>Soil</terrain>
+        <terrain>SoilBoreal</terrain>
         <min>-999</min>
         <max>0.87</max>
       </li>
@@ -243,13 +248,18 @@
         <perlinFrequency>0.015</perlinFrequency>
         <thresholds>
           <li>
-            <terrain>SoilRich</terrain>
+            <terrain>SoilBoreal</terrain>
             <min>-999</min>
-            <max>-0.1</max>
+            <max>-0.01</max>
+          </li>
+		  <li>
+            <terrain>WaterSoilTransition</terrain>
+            <min>-0.01</min>
+            <max>0</max>
           </li>
 		<li>
             <terrain>WaterShallow</terrain>
-            <min>-0.1</min>
+            <min>0</min>
             <max>0.05</max>
           </li>
 		 <!--  <li>
@@ -258,9 +268,9 @@
             <max>-0.14</max>
           </li> -->
 		  <li>
-            <terrain>Mud</terrain>
+            <terrain>WaterSoilTransition</terrain>
             <min>0.05</min>
-            <max>0.07</max>
+            <max>0.06</max>
           </li>
 		  <!-- <li>
             <terrain>MarshyTerrain</terrain>
@@ -269,7 +279,7 @@
           </li> -->
           <li>
             <terrain>SoilBoreal</terrain>
-            <min>0.07</min>
+            <min>0.06</min>
             <max>0.34</max>
           </li>
 		  <!-- <li>
@@ -297,14 +307,14 @@
     </baseWeatherCommonalities>
     <wildPlants>
 	  <PlantMoss>0.05</PlantMoss>
-	  <PlantAstragalus>0.01</PlantAstragalus>
+	  <PlantAstragalus>0.03</PlantAstragalus>
       <PlantDandelion>0.04</PlantDandelion>
       <PlantRaspberry>0.01</PlantRaspberry>
       <BT_Temp_Bush>0.03</BT_Temp_Bush>
 	  <BT_Temp_Shrub>0.03</BT_Temp_Shrub>
       <BT_Temp_GrassG>0.3</BT_Temp_GrassG>
       
-      <BT_TreePine>0.5</BT_TreePine>
+      <BT_TreePine>0.1</BT_TreePine>
       <!-- <PlantTreeBirch>0.01</PlantTreeBirch> -->
     </wildPlants>
     <wildAnimals>

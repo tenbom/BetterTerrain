@@ -4,6 +4,8 @@ using UnityEngine;
 using Verse;
 using Verse.Noise;
 using RimWorld;
+using Harmony;
+using System.Reflection;
 
 namespace Better_Terrain
 {
@@ -14,9 +16,18 @@ namespace Better_Terrain
 		private const float FertilityFreq = 0.021f;
 
 		private const float EdgeMountainSpan = 0.42f;
+		
+		
+		private bool patched = false;
 
 		public override void Generate(Map map)
 		{
+			if(!patched)
+			{
+				var harmony = HarmonyInstance.Create("com.github.betterTerrain.rimworld.mod.065");
+				harmony.PatchAll(Assembly.GetExecutingAssembly());
+				patched = true;
+			}
 			NoiseRenderer.renderSize = new IntVec2(map.Size.x, map.Size.z);
 			//MOUNTAINITY
 			//ModuleBase moduleBase = new Perlin(0.020999999716877937, 2.0, 0.5, 6, Rand.Range(0, 2147483647), QualityMode.High);
@@ -57,7 +68,7 @@ namespace Better_Terrain
 				//num = MapGenTuning.ElevationFactorLargeHills;
 				break;
 			case Hilliness.Mountainous:
-				num = 1.3f;
+				num = 1.25f;
 				//num = MapGenTuning.ElevationFactorMountains;
 				break;
 			case Hilliness.Impassable:

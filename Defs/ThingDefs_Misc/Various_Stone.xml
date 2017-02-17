@@ -226,8 +226,7 @@
     <label>granite</label>
     <description>A very hard igneous rock.</description>
     <graphicData>
-      <!-- <color>(105,95,97)</color> -->
-	  <color>(75,79,90)</color>
+	  <color>(105,95,97)</color>
     </graphicData>
     <statBases>
       <MaxHitPoints>900</MaxHitPoints>
@@ -244,7 +243,7 @@
     <graphicData>
       <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(105,95,97)</color>
+      <color>(135,140,140)</color>
     </graphicData>
     <statBases>
       <Mass>25</Mass>
@@ -331,7 +330,7 @@
     <graphicData>
       <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(158,153,135)</color>
+      <color>(154,155,135)</color>
     </graphicData>
     <statBases>
       <Mass>22</Mass>
@@ -417,7 +416,7 @@
     <graphicData>
       <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(90,90,90)</color>
+      <color>(120,110,110)</color>
     </graphicData>
     <statBases>
       <Mass>18</Mass>
@@ -505,7 +504,7 @@
     <graphicData>
       <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(132,135,132)</color>
+      <color>(170,175,170)</color>
     </graphicData>
     <statBases>
       <Mass>25</Mass>
