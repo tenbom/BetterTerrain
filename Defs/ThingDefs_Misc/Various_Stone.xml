@@ -479,14 +479,14 @@
 		</products>
 	</RecipeDef>
 
-	<!-- ================ Marble ================ -->
+	<!-- ================ Marble is Redefined as Hard, now Basalt ================ -->
 
 	<ThingDef ParentName="UglyRockBase">
     <defName>Marble</defName>
-    <label>marble</label>
-    <description>A soft metamorphic rock.</description>
+    <label>basalt</label>
+    <description>Common volcanic rock formed from the rapid cooling of basaltic lava.</description>
     <graphicData>
-      <color>(132,135,132)</color>
+      <color>(105,108,115)</color>
     </graphicData>
     <statBases>
       <MaxHitPoints>450</MaxHitPoints>
@@ -500,11 +500,11 @@
 
   <ThingDef ParentName="ChunkBase">
     <defName>ChunkMarble</defName>
-    <label>marble chunk</label>
+    <label>basalt chunk</label>
     <graphicData>
       <texPath>BT/Item/Chunk/ChunkStone</texPath>
       <graphicClass>Graphic_Random</graphicClass>
-      <color>(170,175,170)</color>
+      <color>(105,108,115)</color>
     </graphicData>
     <statBases>
       <Mass>25</Mass>
@@ -520,23 +520,23 @@
 
   <ThingDef ParentName="StoneBlocksBase">
     <defName>BlocksMarble</defName>
-    <label>marble blocks</label>
-    <description>Blocks of solid marble. Marble is a soft, beautiful stone, known for being easy to sculpt.</description>
+    <label>basalt blocks</label>
+    <description>Blocks of solid basalt. Basalt is used in construction and in making statues.</description>
     <graphicData>
-      <color>(132,135,132)</color>
+      <color>(105,108,115)</color>
     </graphicData>
     <statBases>
       <MarketValue>1.9</MarketValue>
       <Mass>1.25</Mass>
     </statBases>
     <stuffProps>
-      <color>(132,135,132)</color>
+      <color>(105,108,115)</color>
       <soundImpactStuff>BulletImpactGround</soundImpactStuff>
       <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
       <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
-      <stuffAdjective>marble</stuffAdjective>
+      <stuffAdjective>basalt</stuffAdjective>
       <statFactors>
-        <Beauty>1.35</Beauty>
+        <Beauty>1.1</Beauty>
         <MarketValue>0.45</MarketValue>
         <MaxHitPoints>1.2</MaxHitPoints>
 				<WorkToBuild>5.5</WorkToBuild>
@@ -547,8 +547,8 @@
 
 	<RecipeDef ParentName="MakeStoneBlocksBase">
 		<defName>MakeStoneBlocksMarble</defName>
-		<label>make marble blocks</label>
-		<description>Cuts marble chunks into usable blocks.</description>
+		<label>make basalt blocks</label>
+		<description>Cuts basalt chunks into usable blocks.</description>
 		<ingredients>
 			<li>
 				<filter>

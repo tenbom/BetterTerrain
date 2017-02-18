@@ -81,6 +81,7 @@
     <Compile Include="BT_GenPlantReproduction.cs" />
     <Compile Include="GenStepCaves.cs" />
     <Compile Include="Harmony\Init.cs" />
+    <Compile Include="Harmony\NaturalRockTypesIn.cs" />
     <Compile Include="Harmony\RegenerateAllLayers.cs" />
     <Compile Include="Harmony\SetForbiddenIfOutsideHomeArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

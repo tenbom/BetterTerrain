@@ -1,6 +1,7 @@
 ﻿using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Verse;
 using Verse.Noise;
 using RimWorld;
@@ -85,8 +86,10 @@ namespace Better_Terrain
 			//elevation is the ElevationMapGenFloatGrid modified by 'flat' or 'small hills' or 'mountainous'.
 			MapGenFloatGrid elevation = MapGenerator.Elevation;
 			MapGenFloatGrid fertility = MapGenerator.FloatGridNamed("Fertility", map);
-			//Create mountains at high elevation and extreme levels of fertilities (high or low).
-			foreach (IntVec3 current in map.AllCells)
+
+            List<ThingDef> hardRockList = DefDatabase<ThingDef>.AllDefs.Where(IsHardRock).ToList<ThingDef>();
+            //Create mountains at high elevation and extreme levels of fertilities (high or low).
+            foreach (IntVec3 current in map.AllCells)
 			{
 				float num2 = elevation[current] - .1f;
 				float fert = fertility[current]-.16f;
@@ -96,9 +99,18 @@ namespace Better_Terrain
 				//if((mountainability>num) && (elevation[current]*.3f + fertility[current]*.75f > -.05f))
 				if(mountainability>num)
 				{
-					ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(map, current, mountainability);
-					GenSpawn.Spawn(def, current, map);
-					for (int i = 0; i < list.Count; i++)
+                    if (mountainability > num * 1.7)
+                    {
+                        ThingDef def = hardRockList.FirstOrDefault(x => x.defName.StartsWith(RockDefAt(map,current,mountainability).defName)) ??
+                                       RockDefAt(map, current, mountainability);
+                        GenSpawn.Spawn(def, current, map);
+                    }
+                    else
+                    {
+                        ThingDef def = BT_GenStep_RocksFromGrid.RockDefAt(map, current, mountainability);
+                        GenSpawn.Spawn(def, current, map);
+                    }
+                    for (int i = 0; i < list.Count; i++)
 					{
 						if (num2 > list[i].minGridVal)
 						{
@@ -169,5 +181,11 @@ namespace Better_Terrain
 		{
 			return c.Roofed(map) && c.GetRoof(map).isNatural;
 		}
-	}
+
+        private static bool IsHardRock(ThingDef d)
+        {
+            return d.category == ThingCategory.Building && d.building.isNaturalRock
+                && !d.building.isResourceRock && d.defName.EndsWith("BTHard");
+        }
+    }
 }
