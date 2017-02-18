@@ -44,8 +44,10 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\Harmony\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -74,11 +76,13 @@
     <Compile Include="BT_GenStep_Plants.cs" />
     <Compile Include="BT_GenStep_RocksFromGrid.cs" />
     <Compile Include="BT_GenStep_Terrain.cs" />
-    <Compile Include="BT_Harmony.cs" />
     <Compile Include="BT_MakeThingDef.cs" />
     <Compile Include="BT_MapConditionManager.cs" />
     <Compile Include="BT_GenPlantReproduction.cs" />
-    <None Include="ClipBoard.cs" />
+    <Compile Include="GenStepCaves.cs" />
+    <Compile Include="Harmony\Init.cs" />
+    <Compile Include="Harmony\RegenerateAllLayers.cs" />
+    <Compile Include="Harmony\SetForbiddenIfOutsideHomeArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
