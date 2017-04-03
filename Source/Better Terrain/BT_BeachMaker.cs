@@ -5,6 +5,7 @@ using RimWorld;
 
 namespace Better_Terrain
 {
+	[StaticConstructorOnStartup]
 	internal static class BT_BeachMaker
 	{
 		private const float PerlinFrequency = 0.03f;
@@ -18,6 +19,9 @@ namespace Better_Terrain
 		private static ModuleBase beachNoise;
 
 		private static readonly FloatRange CoastWidthRange = new FloatRange(20f, 60f);
+
+		private static TerrainDef waterShallowDef = DefDatabase<TerrainDef>.GetNamedSilentFail("SaltWaterShallow") ?? TerrainDefOf.WaterShallow;
+		private static TerrainDef waterDeepDef = DefDatabase<TerrainDef>.GetNamedSilentFail("SaltWaterDeep") ?? TerrainDefOf.WaterDeep;
 
 		public static void Init(Map map)
 		{
@@ -58,6 +62,7 @@ namespace Better_Terrain
 
 		public static TerrainDef BeachTerrainAt(IntVec3 loc)
 		{
+
 			if (BT_BeachMaker.beachNoise == null)
 			{
 				return null;
@@ -65,11 +70,11 @@ namespace Better_Terrain
 			float value = BT_BeachMaker.beachNoise.GetValue(loc);
 			if (value < 0.1f)
 			{
-				return TerrainDefOf.WaterDeep;
+				return waterDeepDef;
 			}
 			if (value < 0.45f)
 			{
-				return TerrainDefOf.WaterShallow;
+				return waterShallowDef;
 			}
 			if (value < 1f)
 			{
