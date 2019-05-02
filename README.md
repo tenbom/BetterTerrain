@@ -1,10 +1,10 @@
 Italics: *italics* _italics_
 bold: **bold** __bold__
 
-#header1
+# header1
 ======
 		
-##header2
+## header2
 ------
 
 ****
