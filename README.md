@@ -2,7 +2,7 @@ Italics: *italics* _italics_
 bold: **bold** __bold__
 
 # header1
-======
+
 		
 ## header2
 ------
@@ -15,7 +15,7 @@ Paragraph: stuff, space, space
 this is a new line?
 This isn't?
 
-  Indent
+   Indent
 
 
 * Item 1
@@ -35,7 +35,7 @@ This isn't?
 [text][case-sensitive referance text]  
 [text](../blob/master/LICENSE)  
 
->words
+>words  
 >words
 
 CrossOut: ~~word~~
