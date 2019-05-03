@@ -6,7 +6,7 @@
 
 Welcome!  
 This mod showcases vast and sweeping changes to beautify the terrain of RimWorld colonies.  Each map will showcase multiple different 'mini-biomes' befitting the over-arching biome.  Temperate forests will have areas ranging from dense forests to praries to rocky plains, so on and so forth.
-* __Plants:__ Now placed according to the 'mini-biome'.  Forests are dense with trees and bushes; plains have a thick layer of yellowish grass, patches of beautifull flowers and an overall splattering of shrubs.
+* __Plants:__ Now placed in different quantities in different areas of a map to create multiple 'mini-biomes' within a map, such as forests and plains.  Forests are dense with trees and bushes; plains are layerd thick with yellowish grass, patches of beautifull flowers and an overall splattering of shrubs.
 * __Textures:__ Plants, trees, rocks, ground texture, mountain color... all recrafted for the sake of viewing pleasure.
 * __Mountains:__  Now generally fallow the contours of land, tieing them into the overall immersive aesthetic.
 * __Layering:__ Trees can now partially block out the view of rocks, people and animals; preventing the jarring appearance of them floating.
