@@ -15,13 +15,13 @@ This mod showcases vast and sweeping changes to beautify the terrain of RimWorld
 -----
 
 ### Requirements  
-* Rimworld A16:
+* Rimworld A16:   
    Later Compatibilities not tested
 
 -------------
 
 ### Compatibility
-* _Vegetable Garden:_ 
+* _Vegetable Garden:_   
    Minor Conflicts  
    * Load BetterTerrain after Vegetable Garden.
    * Both mods tweak some vanilla plants.
@@ -86,6 +86,6 @@ This means mountains will genererally form in areas away from low fertility area
    * added in if statements that calculate a noise variable.  Noise is the value the biome XMLs will use when determining what terrain goes where.
 Higher elevations calculate the XML value based more on elevation, lower elevations calculate it based more on fertility.
 
-* GenStep_Plants
-   Use Terrain variable, CanTakeFootPrint, as a notifier if a terrain is fertile.  en I used Sowtags in the ThingDef.plant class to tell the assemblies if the plant should go on fertile soil and if it should be based on the plant perlin map or not.  The first foreach method after the 5 list defines is just reading the tags from all the plants in the biome and putting them in the correct list.  The huge foreach after I define the canPlaceList takes a random tile in the map (vanilla methodology) exc after it determine if the ground was plantable, I added in my stuff.  I check if the land is fertile or not, then for each plant in the biome that should be placed on that terrain (fertile or unfertile)  I get the group of plants that should go there and should be placed using the perlin map (usually trees), choose a random one based off the perlin value.
+* GenStep_Plants   
+   * Use Terrain variable, CanTakeFootPrint, as a notifier if a terrain is fertile.  en I used Sowtags in the ThingDef.plant class to tell the assemblies if the plant should go on fertile soil and if it should be based on the plant perlin map or not.  The first foreach method after the 5 list defines is just reading the tags from all the plants in the biome and putting them in the correct list.  The huge foreach after I define the canPlaceList takes a random tile in the map (vanilla methodology) exc after it determine if the ground was plantable, I added in my stuff.  I check if the land is fertile or not, then for each plant in the biome that should be placed on that terrain (fertile or unfertile)  I get the group of plants that should go there and should be placed using the perlin map (usually trees), choose a random one based off the perlin value.
 Then I add in all the plants that are to be randomly scattered about that terrain (grass, debris, filler, exc exc)
