@@ -1,30 +1,34 @@
+# Discontinued
+
 # RimWorld, Better Terrain
 
-![](https://i.imgur.com/1SzUQXR.png | width=100)
+![](https://i.imgur.com/1SzUQXR.png)
 
-	Welcome!  
-	This mod showcases vast and sweeping changes to the enviornmental textures of RimWorld.  
-	quick, is this the right file? talk
-		graphics mod, for version of RimWorld, scope (trees, grass, plants, ground), images
-	requirements
-		compatibility
-		installation2
-		uses Harmony
-2-Using the Mod
-	Specifically what has changed
-	Biom1-
-		changes
-	Biom2-
-		changes
-	Compatibility-
-		how you resolve conflicts
-3-Modding with this Mod
-	C# changes
-	
+Welcome!  
+This mod showcases vast and sweeping changes to beautify the terrain of RimWorld colonies.  Each map will showcase multiple different 'mini-biomes' befitting the over-arching biome.  Temperate forests will have areas ranging from dense forests to praries to rocky plains, so on and so forth.
+* __Plants:__ Now placed according to the 'mini-biome'.  Forests are dense with trees and bushes; plains have a thick layer of yellowish grass, patches of beautifull flowers and an overall splattering of shrubs.
+* __Textures:__ Plants, trees, rocks, ground texture, mountain color... all recrafted for the sake of viewing pleasure.
+* __Mountains:__  Now generally fallow the contours of land, tieing them into the overall immersive aesthetic.
+* __Layering:__ Trees can now partially block out the view of rocks, people and animals; preventing the jarring appearance of them floating.
+* __Harmony:__ Built using Andreas Pardeike's beautifull Harmony, allowing compatibility in all but fringe cases.
 
+-----
 
+### Requirements  
+* Rimworld A16:
+   Later Compatibilities not tested
 
+-------------
 
+### Compatibility
+* _Vegetable Garden:_ 
+   Minor Conflicts  
+   * Load BetterTerrain after Vegetable Garden.
+   * Both mods tweak some vanilla plants.
+   
+No other Reported Conflicts.
+
+-----------------
 
 
 
