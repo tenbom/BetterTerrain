@@ -30,6 +30,26 @@ No other Reported Conflicts.
 
 -----------------
 
+Player notes
+
+# Biomes
+
+* Temperate Forest
+   A wonderful melting pot of the land: meandering rivers, automnal forests and hearty plains.
+   * Birch tress have been given a glorious update, they now cascade in color from area to area
+   * Grass has been fluffed up, it is now larger and more luxurious
+   * Plant density, plants are more dense around rivers and lakes, falling to scarce near most mountains.
+   
+![](https://i.imgur.com/1HCE5Ov.png)
+
+* Tropical Forest
+   A dark, dense jungle:  large rivers, vast marshlands and reclusive mushroom patchs.
+   * Cecropia trees, the staple of this jungle, they have been given a lushious green color and large, sun-shrouding canopies
+   * Bushes, these have become serious ground cover, they turn most of the landscape into large flowing brush-life.
+   * Mushrooms, rings of mushrooms are known to grow in breaks in the forest, a small relief from the otherwise inhospitable land
+   
+![](https://i.imgur.com/Y8gZNt0.png)
+Modder Notes
 
 
 Italics: *italics* _italics_
