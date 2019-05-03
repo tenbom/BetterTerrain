@@ -1,3 +1,33 @@
+# RimWorld, Better Terrain
+
+![](https://i.imgur.com/1SzUQXR.png | width=100)
+
+	Welcome!  
+	This mod showcases vast and sweeping changes to the enviornmental textures of RimWorld.  
+	quick, is this the right file? talk
+		graphics mod, for version of RimWorld, scope (trees, grass, plants, ground), images
+	requirements
+		compatibility
+		installation2
+		uses Harmony
+2-Using the Mod
+	Specifically what has changed
+	Biom1-
+		changes
+	Biom2-
+		changes
+	Compatibility-
+		how you resolve conflicts
+3-Modding with this Mod
+	C# changes
+	
+
+
+
+
+
+
+
 Italics: *italics* _italics_
 bold: **bold** __bold__
 
