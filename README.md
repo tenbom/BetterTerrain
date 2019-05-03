@@ -34,7 +34,7 @@ Player notes
 
 # Biomes
 
-* Temperate Forest   
+### Temperate Forest  
    A wonderful melting pot of the land: meandering rivers, automnal forests and hearty plains.
    * Birch tress have been given a glorious update, they now cascade in color from area to area
    * Grass has been fluffed up, it is now larger and more luxurious
@@ -44,7 +44,7 @@ Player notes
    
 ![](https://i.imgur.com/1HCE5Ov.png)
 
-* Tropical Forest   
+### Tropical Forest   
    A dark, dense jungle:  large rivers, vast marshlands and reclusive mushroom patchs.
    * Cecropia trees, the staple of this jungle, they have been given a lushious green color and large, sun-shrouding canopies
    * Bushes, these have become serious ground cover, they turn most of the landscape into large flowing brush-life.
@@ -55,17 +55,17 @@ Player notes
    
 ![](https://i.imgur.com/Y8gZNt0.png)
 
-* Desert   
+### Desert   
   50% Completed   
     * Adjusting landscape
     * Searching for new art
     
-* Boreal Forest   
+### Boreal Forest   
   30% Completed   
      * Adjusting landscape
      * Searching for new art
      
-* Other   
+### Other   
   0% Completed   
      
 # Technical Notes for Other Modders
