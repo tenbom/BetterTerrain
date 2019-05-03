@@ -51,19 +51,19 @@ Player notes
    * Mushrooms, rings of mushrooms are known to grow in breaks in the forest, a small relief from the otherwise inhospitable land
    
    80% Completed   
-     * Finalizing art and colors.   
+   * Finalizing art and colors.   
    
 ![](https://i.imgur.com/Y8gZNt0.png)
 
 ### Desert   
   50% Completed   
-    * Adjusting landscape
-    * Searching for new art
+  * Adjusting landscape   
+  * Searching for new art
     
 ### Boreal Forest   
   30% Completed   
-     * Adjusting landscape
-     * Searching for new art
+   * Adjusting landscape   
+   * Searching for new art
      
 ### Other   
   0% Completed   
