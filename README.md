@@ -5,15 +5,13 @@
 ![](https://i.imgur.com/1SzUQXR.png)
 
 Welcome!  
-This mod showcases vast and sweeping changes all aimed at beautifying the terrain of RimWorld colonies.  It ties together the once independent 'terrain', 'plant' and 'mountain' generation systems of RimWorld into one coherent ecosystem.
+This mod showcases vast and sweeping changes all aimed at beautifying the terrain of RimWorld colonies.  It ties together the once independent 'terrain', 'plant' and 'mountain' generation systems of RimWorld into one coherent ecosystem. 
 
-* __Terrain:__ The type of ground in a map is based on a random fertility map, areas of high fertility get lakes and fertile soil.  Originally, all other fertilies get the base ground for the region, this mod causes areas of lower fertility to get more barren and hilly terrains.
-* __Mountains:__  Originally RimWorld's mountains are independently formed off of an elevation map.  Now mountains are tied into the terrain.  They will be more likely to form at the crest of hills, yet still randomly branch off into forests, plains, and lakes.
-* __Plants:__ Originally every plant in RimWorld is randomly scattered, possibly in patches, throughout each map.  Now plants are tied into the elevation and fertility of a map. For example in the Temeprate Forest: in areas of high fertilility yet low elevation, the grass is green and dense since water is abundant;  in nearby fertile areas, thick forests form, dense with shrubs and spattered with green grass; less fertile areas are large fields of yellowish grass, patches of beautifull flowers, and an overall splattering of shrubs; in higher, unfertile areas there is very little plant life short of sporadic flowers, hearty trees, and hearty shrubs.
+A single map can contain areas ranging from wet, lush, regions of vibrant green grass and flowers... to dense forests thick with underlying brush... to large fields of yellowish grass, interwoven with patches of beautifull flowers... to unfertile areas with little life short of sporadic flowers, hearty trees, and hearty shrubs...
 
-* __Textures:__ Little hasn't been touched.  Most plants, trees, rocks, ground texture, mountain color all have been recrafted to fit the flowing landscapes of BetterTerrain.
-* __Layering:__ Originally rocks, people, and animals are all drawn on top of trees.  So if a man walks 'behind' a tree the engine paints him walking on top of it.  This appears exceptionally 2-dimensional so now, trees can partially block out the view of rocks, people, and animals behind them.
-* __Harmony:__ This mod is built using Andreas Pardeike's beautifull Harmony, allowing compatibility in all but fringe cases.
+Outside of that, there are tweaks to RimWorld's layering.  Originally rocks, people, and animals are all drawn on top of trees.  If a man walks 'behind' a tree the engine paints him last so it appears like he is walking on top of a 2-dimensional tree painted onto the ground.  This is jarring, now, trees can partially block out the view of rocks, people, and animals behind them. 
+
+Finally, special thanks to Andreas Pardeike's and his beautifull, beautifull Harmony mod.  It allows all these vast and varying changes to be formed into one extremely compatible yet easy to install package.
 
 -----
 
@@ -69,8 +67,22 @@ Player notes
      
 ### Other   
   0% Completed   
+  
+
+
+-------------------------
+
+## Overview Of Changes
+  * __Terrain:__ The type of ground in a map is based on a random fertility map, areas of high fertility get lakes and fertile soil.  Originally, all other fertilies get the base ground for the region, this mod causes areas of lower fertility to get more barren and then hilly terrains.
+  * __Mountains:__  Originally RimWorld's mountains are independently formed off of an elevation map.  Now mountains are tied into the terrain.  They will be more likely to form in hilly terrains, yet still randomly branch off into forests, plains, and lakes.
+  * __Plants:__ Originally every plant in RimWorld is randomly scattered, possibly in patches, throughout a map.  Now plants are tied into the elevation and fertility of a map.  They will only be placed in fitting areas of a map and in propper quantities.
+  * __Layering:__ Rewordered the the paint layers.  People, animals, and rocks are moved ahead of trees, so if a tree is large enough to block out the view of a person, animal, or rock, it will do so.
+  * __Textures:__ Little hasn't been touched.  Most plants, trees, rocks, ground texture, mountain color all have been recrafted to fit the flowing landscapes of BetterTerrain.
+  * __Harmony:__ This mod is built using Andreas Pardeike's beautifull Harmony, allowing compatibility in all but fringe cases and conflicting XML edits (typically from editing a default plants attributes).
+
+---------------------
      
-# Technical Notes for Other Modders
+# Technical Notes of Changes
 
 C# Functions Edited
 * GenStep_ElevationFertility   
