@@ -5,12 +5,15 @@
 ![](https://i.imgur.com/1SzUQXR.png)
 
 Welcome!  
-This mod showcases vast and sweeping changes to beautify the terrain of RimWorld colonies.  Each map will showcase multiple different 'mini-biomes' befitting the over-arching biome.  Temperate forests will have areas ranging from dense forests to praries to rocky plains, so on and so forth.
-* __Plants:__ Now placed in different quantities in different areas of a map to create multiple 'mini-biomes' within a map, such as forests and plains.  Forests are dense with trees and bushes; plains are layerd thick with yellowish grass, patches of beautifull flowers and an overall splattering of shrubs.
-* __Textures:__ Plants, trees, rocks, ground texture, mountain color... all recrafted for the sake of viewing pleasure.
-* __Mountains:__  Now generally fallow the contours of land, tieing them into the overall immersive aesthetic.
-* __Layering:__ Trees can now partially block out the view of rocks, people and animals; preventing the jarring appearance of them floating.
-* __Harmony:__ Built using Andreas Pardeike's beautifull Harmony, allowing compatibility in all but fringe cases.
+This mod showcases vast and sweeping changes all aimed at beautifying the terrain of RimWorld colonies.  It ties together the once independent 'terrain', 'plant' and 'mountain' generation systems of RimWorld into one coherent ecosystem.
+
+* __Terrain:__ The type of ground in a map is based on a random fertility map, areas of high fertility get lakes and fertile soil.  Originally, all other fertilies get the base ground for the region, this mod causes areas of lower fertility to get more barren and hilly terrains.
+* __Mountains:__  Originally RimWorld's mountains are independently formed off of an elevation map.  Now mountains are tied into the terrain.  They will be more likely to form at the crest of hills, yet still randomly branch off into forests, plains, and lakes.
+* __Plants:__ Originally every plant in RimWorld is randomly scattered, possibly in patches, throughout each map.  Now plants are tied into the elevation and fertility of a map. For example in the Temeprate Forest: in areas of high fertilility yet low elevation, the grass is green and dense since water is abundant;  in nearby fertile areas, thick forests form, dense with shrubs and spattered with green grass; less fertile areas are large fields of yellowish grass, patches of beautifull flowers, and an overall splattering of shrubs; in higher, unfertile areas there is very little plant life short of sporadic flowers, hearty trees, and hearty shrubs.
+
+* __Textures:__ Little hasn't been touched.  Most plants, trees, rocks, ground texture, mountain color all have been recrafted to fit the flowing landscapes of BetterTerrain.
+* __Layering:__ Originally rocks, people, and animals are all drawn on top of trees.  So if a man walks 'behind' a tree the engine paints him walking on top of it.  This appears exceptionally 2-dimensional so now, trees can partially block out the view of rocks, people, and animals behind them.
+* __Harmony:__ This mod is built using Andreas Pardeike's beautifull Harmony, allowing compatibility in all but fringe cases.
 
 -----
 
@@ -22,9 +25,8 @@ This mod showcases vast and sweeping changes to beautify the terrain of RimWorld
 
 ### Compatibility
 * _Vegetable Garden:_   
-   Minor Conflicts  
-   * Load BetterTerrain after Vegetable Garden.
-   * Both mods tweak some vanilla plants.
+   Minor Conflicts.  Load BetterTerrain after Vegetable Garden. 
+   * Vegetable Garden will not allow you to to plant some native plants, like agave.
    
 No other Reported Conflicts.
 
