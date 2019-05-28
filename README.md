@@ -5,13 +5,13 @@
 ![](https://i.imgur.com/1SzUQXR.png)
 
 Welcome!  
-This mod showcases vast and sweeping changes all aimed at beautifying the terrain of RimWorld colonies.  It ties together the once independent 'terrain', 'plant' and 'mountain' generation systems of RimWorld into one coherent ecosystem. 
+This mod showcases vast and sweeping changes all aimed at beautifying the terrain of RimWorld colonies.  It ties together the once independent 'terrain', 'plant' and 'mountain' generation systems of RimWorld into one flowing ecosystem. 
 
-A single map can contain areas ranging from wet, lush, regions of vibrant green grass and flowers... to dense forests thick with underlying brush... to large fields of yellowish grass, interwoven with patches of beautifull flowers... to unfertile areas with little life short of sporadic flowers, hearty trees, and hearty shrubs...
+A single map can contain dense forests thick with underlying brush that flow into lush meadows of vibrant green grass or large fields of yellowish grass, interwoven with patches of beautifull flowers.
 
-Outside of that, there are tweaks to RimWorld's layering.  Originally rocks, people, and animals are all drawn on top of trees.  If a man walks 'behind' a tree the engine paints him last so it appears like he is walking on top of a 2-dimensional tree painted onto the ground.  This is jarring, now, trees can partially block out the view of rocks, people, and animals behind them. 
+Outside of that, there are tweaks to RimWorld's layering.  Originally rocks, people, and animals are all drawn on top of trees.  If a man walks 'behind' a tree the engine still paints him on top of the tree so it appears as if he is walking on top of a 2-dimensional tree painted onto the ground.  That is jarring.  Now trees wil semi-opaquely block out the view of rocks, people, and animals behind them.
 
-Finally, special thanks to Andreas Pardeike's and his beautifull, beautifull Harmony mod.  It allows all these vast and varying changes to be formed into one extremely compatible yet easy to install package.
+Finally, special thanks to Andreas Pardeike's for his beautifull, beautifull Harmony mod.  It allows a modder to change large sections of the game without compromising compatibility, on top of that it is built into the mods that use it, so players don't have to download any additional requirements or activate any Harmony mod beforehand.  It's super sweet.
 
 -----
 
