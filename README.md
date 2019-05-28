@@ -11,7 +11,7 @@ Each biome is generated much more intricately, the maps transition through multi
  
 The other large change is to Rimworld's layering.  Originally rocks, people, and animals are all drawn on top of trees.  If a man walks 'behind' a tree the engine still paints him on top of the tree so it appears as if he is walking on top of a 2-dimensional tree painted onto the ground.  That is jarring.  Now trees wil semi-opaquely block out the view of rocks, people, and animals behind them.
 
-Finally, special thanks to Andreas Pardeike's for his beautifull, beautifull Harmony mod.  It allows a modder to change large sections of the game without compromising muxh compatibility.  On top of that it is built to be extremely convenient for players, having Harmony in a mod causes no additional pre-requisites for the mod (no 'install Harmony and place it beforehand').  It's super sweet.
+Finally, special thanks to Andreas Pardeike's for his beautifull, beautifull Harmony mod.  It allows a modder to change large sections of the game without compromising much compatibility.  On top of that it is built to be extremely convenient for players, having Harmony in a mod causes no additional pre-requisites for the mod (no 'install Harmony and place it beforehand').  It's super sweet.
 
 -----
 
